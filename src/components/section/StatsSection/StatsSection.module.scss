@@ -1,0 +1,41 @@
+@import '../../../styles/share/variables';
+
+.stats {
+  padding: 56px 0 92px;
+
+  .countryChip {
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label {
+    color: $tertiary-color;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-right: 6px;
+  }
+
+  .highlight {
+    color: $accent-color;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .description {
+    max-width: 420px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,39 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  color: $primary-color;
+  font-weight: 700;
+  text-align: center;
+  font-size: 68px;
+
+  @include use-mobile() {
+    font-size: 48px;
+  }
+}
+
+body {
+  color: $secondary-color;
+  font-family: $font-family;
+  background-color: $background-color;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  @include use-mobile() {
+    .container {
+      width: unset;
+    }
+  }
+
+  &.menu-visible {
+    overflow-y: hidden;
+  }
+}
+
+section {
+  position: relative;
+}

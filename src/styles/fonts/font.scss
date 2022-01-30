@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Hauora';
+  font-weight: 400;
+  src: url('../../fonts/Hauora-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Hauora';
+  font-weight: 600;
+  src: url('../../fonts/Hauora-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Hauora';
+  font-weight: 700;
+  src: url('../../fonts/Hauora-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'GolosText';
+  src: url('../../fonts/Golos/medium/golos-medium.eot');
+  src: url('../../fonts/Golos/medium/golos-medium.woff2') format('woff2'),
+    url('../../fonts/Golos/medium/golos-medium.woff') format('woff'),
+    url('../../fonts/Golos/medium/golos-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

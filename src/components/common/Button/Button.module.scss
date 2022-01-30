@@ -1,0 +1,29 @@
+@import '../../../styles/share/variables';
+
+.button {
+  background-color: $primary-color;
+  color: $white;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  transition: $mid-transition;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+
+  &.secondary {
+    background-color: $white;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $white;
+    }
+  }
+}

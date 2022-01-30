@@ -1,0 +1,37 @@
+$black: #000000;
+$white: #ffffff;
+$alabaster: #fafafa;
+$purple: #6811be;
+$black-russian: #07001a;
+$martinique: #3c364d;
+$jumbo: #777480;
+
+$hauora-font: 'Hauora', sans-serif;
+$golos-font: 'GolosText', sans-serif;
+
+$font-size: 1rem;
+$font-family: $hauora-font;
+$header-font-family: $golos-font;
+
+$background-color: $alabaster;
+
+$mid-transition: 0.3s all;
+$breakpoint: 992px;
+$breakpoint-tablet: 1200px;
+
+$primary-color: $black-russian;
+$secondary-color: $martinique;
+$tertiary-color: $jumbo;
+$accent-color: $purple;
+
+@mixin use-mobile() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin use-tablet() {
+  @media screen and (max-width: $breakpoint-tablet) and (min-width: $breakpoint) {
+    @content;
+  }
+}
