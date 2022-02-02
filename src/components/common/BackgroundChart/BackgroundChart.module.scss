@@ -3,9 +3,9 @@
 .backgroundChart {
   position: absolute;
   width: 100%;
-  height: 70%;
+  height: 100%;
   left: 0;
-  top: 50%;
+  top: 80%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-around;
@@ -13,12 +13,22 @@
   z-index: -1;
   opacity: 0.2;
 
+  &::before {
+    content: '';
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, $background-color, transparent);
+    z-index: 1;
+  }
+
   .item {
     width: 8px;
     background-color: #f0edf7;
     display: flex;
     border-radius: 4px;
-    transition: $mid-transition;
     overflow: hidden;
   }
 
@@ -27,5 +37,17 @@
     height: 40px;
     background: #cf9fff;
     border-radius: 4px;
+    position: relative;
+    transition: $mid-transition;
+    animation: hatSlide 5s infinite linear alternate;
+  }
+}
+
+@keyframes hatSlide {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(100% - 40px);
   }
 }

@@ -1,41 +1,56 @@
 @import '../../../styles/share/variables';
 
 .stats {
-  padding: 56px 0 92px;
-
-  .countryChip {
-    margin: 0 auto 12px;
+  .card {
+    padding: 12px 32px 24px;
+    border: 1px solid #eeedf0;
+    box-sizing: border-box;
+    box-shadow: 0px 12px 24px rgba(26, 26, 26, 0.04);
+    background-color: $white;
+    border-radius: 24px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+
+    &.center {
+      .header {
+        width: 100%;
+      }
+      .title,
+      .description {
+        text-align: center;
+      }
+    }
+
+    @include use-mobile() {
+      margin-bottom: 1rem;
+    }
   }
 
-  .label {
-    color: $tertiary-color;
-    font-weight: 500;
-    font-size: 1rem;
-    padding-right: 6px;
-  }
-
-  .highlight {
-    color: $accent-color;
-  }
-
-  .header {
-    margin-bottom: 24px;
+  .title {
+    background: linear-gradient($accent-color, #8c3fd9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
   }
 
   .description {
-    max-width: 420px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 40px;
+    font-family: $header-font-family;
+    margin-top: 4px;
   }
 
-  .buttonGroup {
+  .inner {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+
+    @include use-mobile() {
+      gap: 0;
+    }
   }
 }

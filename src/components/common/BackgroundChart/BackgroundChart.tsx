@@ -37,9 +37,18 @@ const BackgroundChartItem: React.FC<{ height: number; hasHat: boolean }> = ({
   return (
     <div
       className={classes.item}
-      style={{ height: `${height}%`, paddingTop: `${Math.random() * 101}px` }}
+      style={{
+        height: `${height}%`,
+      }}
     >
-      {hasHat && <div className={classes.hat}></div>}
+      {hasHat && (
+        <div
+          className={classes.hat}
+          style={{
+            animationDuration: `${Math.random() * 5 + 3}s`,
+          }}
+        ></div>
+      )}
     </div>
   );
 };
@@ -48,23 +57,6 @@ export const BackgroundChart: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [container, setContainer] = useState(containerRef?.current);
   const itemsAmount = Math.floor((container?.clientWidth || 0) / (8 + 12));
-
-  useEffect(() => {
-    const hatAnimation = setInterval(() => {
-      if (!containerRef.current) return;
-      const randomChildIndex = Math.floor(
-        Math.random() * containerRef.current.children.length
-      );
-      const children = containerRef.current.children as HTMLCollectionOf<HTMLElement>;
-      children[randomChildIndex].style.paddingTop = `${
-        Math.random() * 101
-      }px`;
-    }, 40);
-
-    return () => {
-      clearInterval(hatAnimation);
-    };
-  }, []);
 
   useEffect(() => {
     setContainer(containerRef?.current);

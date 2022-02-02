@@ -1,43 +1,56 @@
 import React from 'react';
 import classes from './StatsSection.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
-import { Button, ButtonType } from '../../common/Button';
-import { BackgroundChart } from '../../common/BackgroundChart';
-import MonacoIcon from '../../../images/monaco.svg';
+import cx from 'classnames';
 
 export const StatsSection: React.FC = () => {
   return (
     <section id="stats-section" className={classes.stats}>
-      <BackgroundChart />
       <Container>
         <Row>
-          <Col>
-            <div className={classes.welcome}>
-              <h4 className={classes.countryChip}>
-                <span className={classes.label}>Прямиком из Монако</span>
-                <Image src={MonacoIcon} alt="Monaco Icon" />
-              </h4>
-              <h1 className={classes.header}>
-                Лучшее обучение{' '}
-                <span className={classes.highlight}>трейдингу.</span>
-              </h1>
-              <p className={classes.description}>
-                Результаты зависят от опыта и личной дисциплины. Улучшить навыки
-                и повысить продуктивность можно на нашем курсе.
-              </p>
-              <div className={classes.buttonGroup}>
-                <Button title="Регистрация" />
-                <Button title="Подробнее" type={ButtonType.secondary} />
-              </div>
+          <Col md={5}>
+            <div className={classes.inner}>
+              <article className={classes.card}>
+                <header className={classes.header}>
+                  <h2 className={classes.title}>$195M</h2>
+                  <p className={classes.description}>
+                    Торговый объем за 2021 год
+                  </p>
+                </header>
+                <main className={classes.content}></main>
+              </article>
             </div>
           </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row>
-          <Col>
-            <article></article>
+          <Col md={4}>
+            <div className={classes.inner}>
+              <article className={classes.card}>
+                <header className={classes.header}>
+                  <h2 className={classes.title}>400</h2>
+                  <p className={classes.description}>Довольных учеников</p>
+                </header>
+                <main className={classes.content}></main>
+              </article>
+              <article className={classes.card}>
+                <header className={classes.header}>
+                  <h2 className={classes.title}>4 года</h2>
+                  <p className={classes.description}>Управления активами</p>
+                </header>
+                <main className={classes.content}></main>
+              </article>
+            </div>
+          </Col>
+          <Col md={3}>
+            <div className={classes.inner}>
+              <article className={cx(classes.card, classes.center)}>
+                <header className={classes.header}>
+                  <h2 className={classes.title}>19</h2>
+                  <p className={classes.description}>
+                    Успешных потоков обучения{' '}
+                  </p>
+                </header>
+                <main className={classes.content}></main>
+              </article>
+            </div>
           </Col>
         </Row>
       </Container>

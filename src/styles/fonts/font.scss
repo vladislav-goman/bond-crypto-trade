@@ -25,3 +25,13 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'GolosText';
+  src: url('../../fonts/Golos/regular/regular.eot');
+  src: url('../../fonts/Golos/regular/regular.woff2') format('woff2'),
+    url('../../fonts/Golos/regular/regular.woff') format('woff'),
+    url('../../fonts/Golos/regular/regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
