@@ -9,7 +9,7 @@ export const TradingCards: React.FC = () => {
     <section id="cards-section" className={classes.tradingCards}>
       <Container>
         <Row>
-          <Col md={{ span: 4, offset: 1 }}>
+          <Col md={{ span: 4 }}>
             <div className={classes.inner}>
               <Badge>О трейдинге и инвестициях</Badge>
               <h2 className={classes.title}>Как начать торговать?</h2>
@@ -32,7 +32,7 @@ export const TradingCards: React.FC = () => {
               </ol>
             </div>
           </Col>
-          <Col md={7}>
+          <Col md={{ span: 7, offset: 1 }}>
             <div className={classes.inner}>
               <TradingCardsCarousel />
             </div>

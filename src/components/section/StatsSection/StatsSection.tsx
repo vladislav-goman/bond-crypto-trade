@@ -13,7 +13,7 @@ export const StatsSection: React.FC = () => {
     <section id="stats-section" className={classes.stats}>
       <Container>
         <Row>
-          <Col md={4}>
+          <Col xl={4}>
             <div className={classes.inner}>
               <article className={classes.card}>
                 <header className={classes.header}>
@@ -26,7 +26,7 @@ export const StatsSection: React.FC = () => {
               </article>
             </div>
           </Col>
-          <Col md={5}>
+          <Col xl={5}>
             <div className={classes.inner}>
               <article className={cx(classes.card, classes.horizontal)}>
                 <header className={classes.header}>
@@ -69,7 +69,7 @@ export const StatsSection: React.FC = () => {
               </article>
             </div>
           </Col>
-          <Col md={3}>
+          <Col xl={3}>
             <div className={classes.inner}>
               <article className={cx(classes.card, classes.center)}>
                 <header className={classes.header}>
