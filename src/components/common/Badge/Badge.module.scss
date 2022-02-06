@@ -1,0 +1,13 @@
+@import '../../../styles/share/variables';
+
+.badge {
+  background-color: $white-lilac;
+  color: $accent-color;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}

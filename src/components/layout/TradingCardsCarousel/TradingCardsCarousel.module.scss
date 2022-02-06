@@ -1,0 +1,55 @@
+@import '../../../styles/share/variables';
+
+.container {
+  height: 100%;
+
+  @include use-mobile() {
+    padding: 0 2rem;
+  }
+
+  .slide {
+    padding: 24px 32px;
+    border-radius: 24px;
+    box-shadow: 0px 40px 100px rgba(26, 26, 26, 0.04);
+    background-color: $white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 62px;
+    color: $tertiary-color;
+    text-align: left;
+    margin-top: 24px;
+
+    @include use-mobile() {
+      font-size: 1.5rem;
+    }
+  }
+
+  .highlight {
+    color: $primary-color;
+  }
+
+  .pagination {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1px;
+
+    .bullet {
+      width: 22px;
+      height: 22px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 1px solid $white-lilac;
+    }
+
+    .active {
+      background-color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+}

@@ -1,41 +1,10 @@
 @import '../../../styles/share/variables';
 
 .stats {
-  .card {
-    padding: 12px 32px 24px;
-    border: 1px solid #eeedf0;
-    box-sizing: border-box;
-    box-shadow: 0px 12px 24px rgba(26, 26, 26, 0.04);
-    background-color: $white;
-    border-radius: 24px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-
-    &.center {
-      .header {
-        width: 100%;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-    }
-
-    @include use-mobile() {
-      margin-bottom: 1rem;
-    }
-  }
-
   .title {
-    background: linear-gradient($accent-color, #8c3fd9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
+    @include use-accent-gradient();
     text-align: left;
+    word-break: normal;
   }
 
   .description {
@@ -52,5 +21,67 @@
     @include use-mobile() {
       gap: 0;
     }
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+  }
+
+  .emoji {
+    position: absolute;
+    width: 156px;
+    height: 156px;
+
+    &.left {
+      top: 25%;
+      left: 20px;
+    }
+
+    &.right {
+      top: 25%;
+      left: 165px;
+    }
+
+    &.top {
+      top: -42%;
+      left: 90px;
+    }
+  }
+}
+
+.card {
+  padding: 12px 32px 24px;
+  border: 1px solid #eeedf0;
+  box-shadow: 0px 12px 24px rgba(26, 26, 26, 0.04);
+  background-color: $white;
+  border-radius: 24px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  &.horizontal {
+    flex-direction: row;
+  }
+
+  &.center {
+    .header {
+      width: 100%;
+    }
+    .title,
+    .description {
+      text-align: center;
+    }
+
+    .content {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 18px;
+    }
+  }
+
+  @include use-mobile() {
+    margin-bottom: 1rem;
   }
 }

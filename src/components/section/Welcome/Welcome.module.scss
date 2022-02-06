@@ -16,7 +16,7 @@
   }
 
   .highlight {
-    color: $accent-color;
+    @include use-accent-gradient();
   }
 
   .header {

@@ -2,13 +2,18 @@ import React from 'react';
 import classes from './StatsSection.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import cx from 'classnames';
+import Image from 'next/image';
+import StarEyesEmoji from '../../../images/emoji/star-eyes.png';
+import PartyGirlEmoji from '../../../images/emoji/girl.png';
+import BeardDudeEmoji from '../../../images/emoji/beard.png';
+import { StudentHat } from '../../common/StudentHat';
 
 export const StatsSection: React.FC = () => {
   return (
     <section id="stats-section" className={classes.stats}>
       <Container>
         <Row>
-          <Col md={5}>
+          <Col md={4}>
             <div className={classes.inner}>
               <article className={classes.card}>
                 <header className={classes.header}>
@@ -21,16 +26,41 @@ export const StatsSection: React.FC = () => {
               </article>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={5}>
             <div className={classes.inner}>
-              <article className={classes.card}>
+              <article className={cx(classes.card, classes.horizontal)}>
                 <header className={classes.header}>
                   <h2 className={classes.title}>400</h2>
                   <p className={classes.description}>Довольных учеников</p>
                 </header>
-                <main className={classes.content}></main>
+                <main className={classes.content}>
+                  <div className={cx(classes.emoji, classes.top)}>
+                    <Image
+                      quality={100}
+                      className={classes.emoji}
+                      alt="Dude with stars eyes Emoji"
+                      src={StarEyesEmoji}
+                    />
+                  </div>
+                  <div className={cx(classes.emoji, classes.right)}>
+                    <Image
+                      quality={100}
+                      className={classes.emoji}
+                      alt="Party Girl Emoji"
+                      src={PartyGirlEmoji}
+                    />
+                  </div>
+                  <div className={cx(classes.emoji, classes.left)}>
+                    <Image
+                      quality={100}
+                      className={classes.emoji}
+                      alt="Beard Dude Girl Emoji"
+                      src={BeardDudeEmoji}
+                    />
+                  </div>
+                </main>
               </article>
-              <article className={classes.card}>
+              <article className={cx(classes.card, classes.horizontal)}>
                 <header className={classes.header}>
                   <h2 className={classes.title}>4 года</h2>
                   <p className={classes.description}>Управления активами</p>
@@ -48,7 +78,27 @@ export const StatsSection: React.FC = () => {
                     Успешных потоков обучения{' '}
                   </p>
                 </header>
-                <main className={classes.content}></main>
+                <main className={classes.content}>
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                  <StudentHat />
+                </main>
               </article>
             </div>
           </Col>
