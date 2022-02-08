@@ -3,12 +3,14 @@
 .button {
   background-color: $primary-color;
   color: $white;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: $header-font-family;
   padding: 12px 20px;
   border: 1px solid $primary-color;
   border-radius: 4px;
   transition: $mid-transition;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background-color: $white;

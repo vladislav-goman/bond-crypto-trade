@@ -16,20 +16,11 @@ export const TradingCards: React.FC = () => {
               <p className={classes.description}>
                 Путь трейдера начинается с осознания, что в торговле нет быстрых
                 результатов.
-                <br />
-                <br />
-                Есть два варианте развития событий:
               </p>
-              <ol className={classes.list}>
-                <li className={classes.item}>
-                  Самостоятельно образовываться, набирать опыт путём личных проб
-                  и ошибок
-                </li>
-                <li className={classes.item}>
-                  Обучаться с помощью ментора. Учиться на чужих ошибках. Вся
-                  стратегия и знания проверены временем
-                </li>
-              </ol>
+              <p className={classes.description}>
+                Но не нужно отчаиваться, главное следовать небольшим сводом
+                правил:
+              </p>
             </div>
           </Col>
           <Col md={{ span: 7, offset: 1 }}>

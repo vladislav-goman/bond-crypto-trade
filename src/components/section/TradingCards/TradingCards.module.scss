@@ -18,26 +18,4 @@
     font-family: $header-font-family;
     margin-bottom: 1rem;
   }
-  .list {
-    counter-reset: muffins;
-    font-family: $header-font-family;
-    padding: 0;
-
-    @include use-mobile() {
-      margin-bottom: 2rem;
-    }
-    .item {
-      counter-increment: muffins;
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-    .item:before {
-      content: counter(muffins) '. ';
-      color: $accent-color;
-      font-weight: 500;
-      font-size: 25px;
-      margin-right: 11px;
-    }
-  }
 }

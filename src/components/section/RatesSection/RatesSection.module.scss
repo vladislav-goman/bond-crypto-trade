@@ -1,0 +1,8 @@
+@import '../../../styles/share/variables';
+
+.rates {
+  transition: $mid-transition;
+  .inner {
+    height: 100%;
+  }
+}

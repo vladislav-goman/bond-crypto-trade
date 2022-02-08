@@ -1,0 +1,43 @@
+@import '../../../styles/share/variables';
+
+.ratesDescription {
+  background-color: #0d0033;
+  border-radius: 24px;
+  padding: 24px 32px;
+  color: $white;
+  height: 100%;
+
+  .title {
+    font-size: 49px;
+    text-align: left;
+    margin: 0 0 16px;
+    color: $white;
+
+    @include use-mobile() {
+      text-align: center;
+    }
+  }
+  .description {
+    font-family: $header-font-family;
+    margin-bottom: 1rem;
+  }
+  .list {
+    counter-reset: muffins;
+    font-family: $header-font-family;
+    padding: 0;
+
+    @include use-mobile() {
+      margin-bottom: 2rem;
+    }
+    .item {
+      counter-increment: muffins;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .item:before {
+      content: counter(muffins) '. ';
+      margin-right: 0.5rem;
+    }
+  }
+}

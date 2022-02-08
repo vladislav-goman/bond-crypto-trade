@@ -7,15 +7,28 @@ export enum ButtonType {
   secondary = 'secondary',
 }
 
-export const Button: React.FC<{
+interface ButtonProps {
   title: string;
   type?: ButtonType;
   id?: string;
   className?: string;
   onClick?: () => void;
-}> = ({ title, type = ButtonType.primary, id, className, onClick }) => {
+  isLink?: boolean;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  title,
+  type = ButtonType.primary,
+  id,
+  className,
+  onClick,
+  isLink,
+}) => {
+  const HtmlTag: React.FC<any> = isLink
+    ? (props) => <a {...props} />
+    : (props) => <button {...props} />;
   return (
-    <button
+    <HtmlTag
       id={id || title}
       onClick={onClick}
       className={cx(
@@ -25,6 +38,6 @@ export const Button: React.FC<{
       )}
     >
       {title}
-    </button>
+    </HtmlTag>
   );
 };
