@@ -115,9 +115,9 @@
     cursor: pointer;
     padding: 0;
 
-    &[data-state='open'] {
-    }
     &[data-state='closed'] {
+    }
+    &[data-state='open'] {
       .vertical {
         transform: translateY(-50%) translateX(-50%) rotate(45deg);
         opacity: 1;
