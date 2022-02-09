@@ -6,7 +6,7 @@ import { RatesAccordion } from '../../layout/RatesAccordion';
 
 export const RatesSection: React.FC = () => {
   return (
-    <section id="cards-section" className={classes.rates}>
+    <section id="rates-section" className={classes.rates}>
       <Container className={classes.transition}>
         <Row>
           <Col md={{ span: 4 }} className={classes.transition}>

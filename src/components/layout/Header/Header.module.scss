@@ -1,0 +1,145 @@
+@import '../../../styles/share/variables';
+
+.header {
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 100;
+  transition: $mid-transition;
+  border-bottom: 2px solid transparent;
+
+  @include use-mobile() {
+    padding: 0.5rem 0;
+  }
+
+  &.active {
+    background-color: $white;
+    border-color: $secondary-color;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .label {
+    font-family: $header-font-family;
+    font-size: 1rem;
+    color: $primary-color;
+    margin: 0;
+
+    @include use-tablet() {
+      font-size: 1rem;
+    }
+
+    @include use-mobile() {
+      font-size: 1rem;
+    }
+  }
+
+  .logo {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+    &__crate {
+      max-height: 60px;
+
+      @include use-tablet() {
+        max-height: 40px;
+      }
+
+      @include use-mobile() {
+        max-height: 40px;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    @include use-mobile() {
+      display: none;
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 14px;
+    transition: $mid-transition;
+    margin-right: 2rem;
+
+    @include use-tablet() {
+      font-size: 16px;
+      margin-right: 1rem;
+    }
+
+    @include use-mobile() {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .apply {
+    background-color: #eeedf0;
+    padding: 12px 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: $secondary-color;
+    border-color: #eeedf0;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+  }
+
+  .hamburger {
+    display: none;
+
+    @include use-mobile() {
+      display: block;
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: $white;
+    z-index: -1;
+    transform: translateX(100vw);
+    transition: $mid-transition;
+
+    @include use-mobile() {
+      display: block;
+    }
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+}

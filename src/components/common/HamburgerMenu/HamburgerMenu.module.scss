@@ -1,0 +1,67 @@
+@mixin half-stripe($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: 15px;
+  height: 3px;
+  background-color: #000000;
+  transition: 0.3s all;
+}
+
+.hamburgerMenu {
+  width: 30px;
+  height: 29px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  .leftTop {
+    @include half-stripe(0, 0);
+  }
+
+  .leftMedium {
+    @include half-stripe(13px, 0);
+  }
+
+  .leftBottom {
+    @include half-stripe(26px, 0);
+  }
+
+  .rightTop {
+    @include half-stripe(0, 15px);
+  }
+
+  .rightMedium {
+    @include half-stripe(13px, 15px);
+  }
+
+  &.open {
+    .leftTop {
+      transform: rotate(45deg) scaleX(1.4) translate(4px, 4px);
+    }
+
+    .leftMedium {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    .leftBottom {
+      transform: rotate(-45deg) scaleX(1.4) translate(4px, -4px);
+    }
+
+    .rightTop {
+      transform: rotate(-45deg) scaleX(1.4) translate(-4px, 4px);
+    }
+
+    .rightMedium {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    .rightBottom {
+      @include half-stripe(26px, 15px);
+      transform: rotate(45deg) scaleX(1.4) translate(-4px, -4px);
+    }
+  }
+}
