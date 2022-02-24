@@ -6,7 +6,10 @@ import Image from 'next/image';
 import StarEyesEmoji from '../../../images/emoji/star-eyes.png';
 import PartyGirlEmoji from '../../../images/emoji/girl.png';
 import BeardDudeEmoji from '../../../images/emoji/beard.png';
-import { StudentHat } from '../../common/StudentHat';
+import { Animation } from '../../common/Animation';
+import graphicUp from '../../../images/animations/graphicUp.json';
+import students from '../../../images/animations/students.json';
+import columns from '../../../images/animations/columns.json';
 
 export const StatsSection: React.FC = () => {
   return (
@@ -22,7 +25,9 @@ export const StatsSection: React.FC = () => {
                     Торговый объем за 2021 год
                   </p>
                 </header>
-                <main className={classes.content}></main>
+                <main className={cx(classes.content, classes.stretch)}>
+                  <Animation animationData={graphicUp} />
+                </main>
               </article>
             </div>
           </Col>
@@ -65,7 +70,12 @@ export const StatsSection: React.FC = () => {
                   <h2 className={classes.title}>4 года</h2>
                   <p className={classes.description}>Управления активами</p>
                 </header>
-                <main className={classes.content}></main>
+                <main className={classes.content}>
+                  <Animation
+                    className={classes.marginLeft}
+                    animationData={columns}
+                  />
+                </main>
               </article>
             </div>
           </Col>
@@ -79,25 +89,7 @@ export const StatsSection: React.FC = () => {
                   </p>
                 </header>
                 <main className={classes.content}>
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
-                  <StudentHat />
+                  <Animation animationData={students} />
                 </main>
               </article>
             </div>

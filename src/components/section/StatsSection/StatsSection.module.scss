@@ -5,6 +5,10 @@
     @include use-accent-gradient();
     text-align: left;
     word-break: normal;
+    font-size: 68px;
+    line-height: 72px;
+    letter-spacing: -1.4px;
+    white-space: nowrap;
   }
 
   .description {
@@ -26,6 +30,18 @@
   .content {
     position: relative;
     height: 100%;
+
+    &.stretch {
+      position: absolute;
+      width: 100%;
+      height: unset;
+      bottom: 2rem;
+      left: 0;
+      @include use-mobile() {
+        position: relative;
+        bottom: 0;
+      }
+    }
   }
 
   .emoji {
@@ -59,9 +75,32 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  position: relative;
+  transition: $mid-transition;
+
+  .marginLeft {
+    margin-left: 30px;
+    @include use-mobile() {
+      margin-left: 0;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 20px 40px rgba(26, 26, 26, 0.04);
+  }
 
   &.horizontal {
     flex-direction: row;
+    padding-bottom: 0;
+    @include use-mobile() {
+      flex-direction: column;
+      padding: 12px 32px 24px;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &.center {
@@ -71,13 +110,6 @@
     .title,
     .description {
       text-align: center;
-    }
-
-    .content {
-      display: grid;
-      width: 100%;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 18px;
     }
   }
 
