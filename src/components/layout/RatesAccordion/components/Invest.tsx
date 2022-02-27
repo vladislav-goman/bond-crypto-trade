@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import cx from 'classnames';
 import classes from '../RatesAccordion.module.scss';
 
 const PlusMark: React.FC = () => {
@@ -80,7 +81,7 @@ export const Invest: React.FC = () => {
           </div>
         </Col>
         <Col md={6}>
-          <div className={classes.inner}>
+          <div className={cx(classes.inner, classes.marginTopMobile)}>
             <h4 className={classes.title}>Что вам даст тариф:</h4>
             <ul className={classes.list}>
               <li className={classes.listItem}>

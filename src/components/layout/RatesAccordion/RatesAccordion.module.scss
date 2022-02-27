@@ -11,6 +11,10 @@
     border-radius: 24px;
     margin-bottom: 1.5rem;
 
+    @include use-mobile() {
+      margin-top: 16px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -83,6 +87,10 @@
     }
   }
 
+  .marginTopMobile {
+    margin-top: 24px;
+  }
+
   .badge {
     background-color: #0d0033;
     border-radius: 24px;
@@ -92,6 +100,10 @@
     padding: 0.5rem 1rem;
     font-weight: 400;
     margin-left: 24px;
+
+    @include use-mobile() {
+      margin-left: 0;
+    }
   }
 
   .button {
@@ -134,6 +146,10 @@
     font-size: 39px;
     margin: 0;
     transition: $mid-transition;
+
+    @include use-mobile() {
+      display: none;
+    }
   }
 
   .container {

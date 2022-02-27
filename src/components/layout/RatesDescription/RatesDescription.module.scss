@@ -28,15 +28,15 @@
     text-align: left;
     margin: 0 0 16px;
     color: $white;
-
-    @include use-mobile() {
-      text-align: center;
-    }
   }
 
   .description {
     font-family: $header-font-family;
     margin-bottom: 1rem;
+
+    @include use-mobile() {
+      font-size: 14px;
+    }
   }
 
   .list {
@@ -46,6 +46,7 @@
 
     @include use-mobile() {
       margin-bottom: 2rem;
+      font-size: 14px;
     }
     .item {
       counter-increment: muffins;
