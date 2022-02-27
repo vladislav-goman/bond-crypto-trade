@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button, ButtonType } from '../../common/Button';
 import { BackgroundChart } from '../../common/BackgroundChart';
 import MonacoIcon from '../../../images/monaco.svg';
+import { Animation } from '../../common/Animation';
 
 export const Welcome: React.FC = () => {
   return (
@@ -15,46 +16,31 @@ export const Welcome: React.FC = () => {
         <Row>
           <Col>
             <div>
-              <h4
-                className={cx(
-                  classes.countryChip,
-                  'animate__animated',
-                  'animate__fadeIn'
-                )}
-              >
-                <span className={classes.label}>Прямиком из Монако</span>
-                <Image src={MonacoIcon} alt="Monaco Icon" />
-              </h4>
-              <h1
-                className={cx(
-                  classes.header,
-                  'animate__animated',
-                  'animate__fadeIn'
-                )}
-              >
-                Лучшее обучение{' '}
-                <span className={classes.highlight}>трейдингу.</span>
-              </h1>
-              <article
-                className={cx(
-                  classes.description,
-                  'animate__animated',
-                  'animate__fadeIn'
-                )}
-              >
-                Результаты зависят от опыта и личной дисциплины. Улучшить навыки
-                и повысить продуктивность можно на нашем курсе.
-              </article>
+              <Animation className={'animate__fadeIn'}>
+                <h4 className={cx(classes.countryChip)}>
+                  <span className={classes.label}>Прямиком из Монако</span>
+                  <Image src={MonacoIcon} alt="Monaco Icon" />
+                </h4>
+              </Animation>
+              <Animation className={'animate__fadeIn'}>
+                <h1 className={cx(classes.header)}>
+                  Лучшее обучение{' '}
+                  <span className={classes.highlight}>трейдингу.</span>
+                </h1>
+              </Animation>
+              <Animation className={'animate__fadeIn'}>
+                <article className={cx(classes.description)}>
+                  Результаты зависят от опыта и личной дисциплины. Улучшить
+                  навыки и повысить продуктивность можно на нашем курсе.
+                </article>
+              </Animation>
               <div className={classes.buttonGroup}>
-                <Button
-                  className={cx('animate__animated', 'animate__fadeInLeft')}
-                  title="Регистрация"
-                />
-                <Button
-                  className={cx('animate__animated', 'animate__fadeInRight')}
-                  title="Подробнее"
-                  type={ButtonType.secondary}
-                />
+                <Animation className={'animate__fadeInLeft'}>
+                  <Button title="Регистрация" />
+                </Animation>
+                <Animation className={'animate__fadeInRight'}>
+                  <Button title="Подробнее" type={ButtonType.secondary} />
+                </Animation>
               </div>
             </div>
           </Col>

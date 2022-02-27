@@ -5,6 +5,7 @@ import classes from './RatesAccordion.module.scss';
 import { Badge } from '../../common/Badge';
 import { Button, ButtonType } from '../../common/Button';
 import { Invest } from './components/Invest';
+import { Animation } from '../../common/Animation';
 
 const PlusSign: React.FC = () => {
   return (
@@ -38,85 +39,82 @@ export const RatesAccordion: React.FC = () => {
   return (
     <article className={classes.ratesAccordion}>
       <Accordion.Root type="single" defaultValue="item-1">
-        <Accordion.Item
-          data-animate="animate__fadeIn"
-          className={classes.item}
-          value="item-1"
-        >
-          <Accordion.Header>
-            <Accordion.Trigger className={classes.trigger}>
-              <div className={classes.group}>
-                <h2 className={classes.acc__header}>Инвест</h2>
-                <Badge className={classes.badge}>€249</Badge>
-              </div>
-              <div className={classes.group}>
-                <Button
-                  isLink
-                  title="Запись"
-                  className={classes.button}
-                  type={ButtonType.secondary}
-                />
-                <PlusSign />
-              </div>
-            </Accordion.Trigger>
-          </Accordion.Header>
-          <Accordion.Content className={classes.content}>
-            <Invest />
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item
-          data-animate="animate__fadeIn"
-          className={classes.item}
-          value="item-2"
-        >
-          <Accordion.Header>
-            <Accordion.Trigger className={classes.trigger}>
-              <div className={classes.group}>
-                <h2 className={classes.acc__header}>Трейдинг</h2>
-                <Badge className={classes.badge}>€599</Badge>
-              </div>
-              <div className={classes.group}>
-                <Button
-                  isLink
-                  title="Запись"
-                  className={classes.button}
-                  type={ButtonType.secondary}
-                />
-                <PlusSign />
-              </div>
-            </Accordion.Trigger>
-          </Accordion.Header>
-          <Accordion.Content className={classes.content}>
-            <Invest />
-          </Accordion.Content>
-        </Accordion.Item>
-        <Accordion.Item
-          data-animate="animate__fadeIn"
-          className={classes.item}
-          value="item-3"
-        >
-          <Accordion.Header>
-            <Accordion.Trigger className={classes.trigger}>
-              <div className={classes.group}>
-                <h2 className={classes.acc__header}>Индивидуальное</h2>
-                <StarMark />
-                <Badge className={classes.badge}>€2999</Badge>
-              </div>
-              <div className={classes.group}>
-                <Button
-                  isLink
-                  title="Запись"
-                  className={classes.button}
-                  type={ButtonType.secondary}
-                />
-                <PlusSign />
-              </div>
-            </Accordion.Trigger>
-          </Accordion.Header>
-          <Accordion.Content className={classes.content}>
-            <Invest />
-          </Accordion.Content>
-        </Accordion.Item>
+        <Animation className={'animate__fadeInRight'}>
+          <Accordion.Item className={classes.item} value="item-1">
+            <Accordion.Header>
+              <Accordion.Trigger className={classes.trigger}>
+                <div className={classes.group}>
+                  <h2 className={classes.acc__header}>Инвест</h2>
+                  <Badge className={classes.badge}>€249</Badge>
+                </div>
+                <div className={classes.group}>
+                  <Button
+                    isLink
+                    title="Запись"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
+                  <PlusSign />
+                </div>
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className={classes.content}>
+              <Invest />
+            </Accordion.Content>
+          </Accordion.Item>
+        </Animation>
+        <Animation className={'animate__fadeInRight'}>
+          <Accordion.Item className={classes.item} value="item-2">
+            <Accordion.Header>
+              <Accordion.Trigger className={classes.trigger}>
+                <div className={classes.group}>
+                  <h2 className={classes.acc__header}>Трейдинг</h2>
+                  <Badge className={classes.badge}>€599</Badge>
+                </div>
+                <div className={classes.group}>
+                  <Button
+                    isLink
+                    title="Запись"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
+                  <PlusSign />
+                </div>
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className={classes.content}>
+              <Invest />
+            </Accordion.Content>
+          </Accordion.Item>
+        </Animation>
+        <Animation className={'animate__fadeInRight'}>
+          <Accordion.Item
+            className={cx(classes.item, classes.last)}
+            value="item-3"
+          >
+            <Accordion.Header>
+              <Accordion.Trigger className={classes.trigger}>
+                <div className={classes.group}>
+                  <h2 className={classes.acc__header}>Индивидуальное</h2>
+                  <StarMark />
+                  <Badge className={classes.badge}>€2999</Badge>
+                </div>
+                <div className={classes.group}>
+                  <Button
+                    isLink
+                    title="Запись"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
+                  <PlusSign />
+                </div>
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className={classes.content}>
+              <Invest />
+            </Accordion.Content>
+          </Accordion.Item>
+        </Animation>
       </Accordion.Root>
     </article>
   );

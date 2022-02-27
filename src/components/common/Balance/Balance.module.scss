@@ -1,0 +1,43 @@
+@import '../../../styles/share/variables';
+
+.balance {
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eeedf0;
+
+  .label {
+    font-size: 13px;
+    line-height: 20px;
+    font-family: $header-font-family;
+    color: $tertiary-color;
+  }
+
+  .divider {
+    width: 1px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #eeedf0;
+    margin: 0 8px;
+  }
+
+  .sum {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+    font-family: $header-font-family;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .indicatorContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+  }
+}

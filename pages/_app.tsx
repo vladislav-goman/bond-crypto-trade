@@ -3,11 +3,8 @@ import type { AppProps } from 'next/app';
 import '../src/styles/index.scss';
 import Head from 'next/head';
 import 'animate.css';
-import { useAnimationObserver } from '../src/hooks/useAnimationObserver';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useAnimationObserver();
-
   return (
     <div className="app">
       <Head>

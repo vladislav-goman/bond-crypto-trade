@@ -1,33 +1,23 @@
 /* eslint-disable */
 import React from 'react';
-import Lottie from 'react-lottie';
 import { useInView } from 'react-intersection-observer';
 import cx from 'classnames';
 
 export const Animation: React.FC<{
-  animationData: any;
+  children: React.ReactNode;
   className?: string;
-}> = ({ animationData, className }) => {
+}> = ({ children, className = '' }) => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
-  const defaultOptions = {
-    loop: false,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
-
   return (
-    <div className={cx(className)} ref={ref}>
-      <Lottie
-        options={defaultOptions}
-        isStopped={!inView}
-        style={{ width: '100%', height: '100%' }}
-      />
+    <div
+      ref={ref}
+      className={cx('animate__animated', { [className]: inView })}
+      style={{ opacity: 0, height: '100%' }}
+    >
+      {children}
     </div>
   );
 };
