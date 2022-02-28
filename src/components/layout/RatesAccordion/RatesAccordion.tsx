@@ -38,7 +38,11 @@ const StarMark: React.FC = () => {
 export const RatesAccordion: React.FC = () => {
   return (
     <article className={classes.ratesAccordion}>
-      <Accordion.Root type="single" defaultValue="item-1">
+      <Accordion.Root
+        className={classes.root}
+        type="single"
+        defaultValue="item-1"
+      >
         <Animation className={'animate__fadeInRight'}>
           <Accordion.Item className={classes.item} value="item-1">
             <Accordion.Header>
@@ -88,10 +92,7 @@ export const RatesAccordion: React.FC = () => {
           </Accordion.Item>
         </Animation>
         <Animation className={'animate__fadeInRight'}>
-          <Accordion.Item
-            className={cx(classes.item, classes.last)}
-            value="item-3"
-          >
+          <Accordion.Item className={classes.item} value="item-3">
             <Accordion.Header>
               <Accordion.Trigger className={classes.trigger}>
                 <div className={classes.group}>
