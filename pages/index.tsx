@@ -4,6 +4,7 @@ import { Welcome } from '../src/components/section/Welcome';
 import { StatsSection } from '../src/components/section/StatsSection';
 import { TradingCards } from '../src/components/section/TradingCards';
 import { RatesSection } from '../src/components/section/RatesSection';
+import { CommunitySection } from '../src/components/section/CommunitySection';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         <StatsSection />
         <TradingCards />
         <RatesSection />
+        <CommunitySection />
       </main>
     </>
   );
