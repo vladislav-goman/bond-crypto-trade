@@ -1,0 +1,37 @@
+{
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.md",
+      "options": { "parser": "markdown" }
+    },
+    {
+      "files": ".prettierrc",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.html",
+      "options": { "parser": "html" }
+    },
+    {
+      "files": "*.css",
+      "options": { "parser": "css" }
+    },
+    {
+      "files": "*.scss",
+      "options": { "parser": "scss" }
+    },
+    {
+      "files": "*.yaml",
+      "options": { "parser": "yaml" }
+    }
+  ],
+  "arrowParens": "always"
+}

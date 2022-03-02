@@ -1,4 +1,133 @@
 @import '../../../styles/share/variables';
 
 .community {
+  background: linear-gradient(
+      180deg,
+      #0d0033 0%,
+      rgba(13, 0, 51, 0.86) 36.25%,
+      rgba(13, 0, 51, 0.68) 68.54%,
+      rgba(13, 0, 51, 0) 100%
+    ),
+    url('../../../images/community-bg.png') no-repeat;
+  background-size: 100%;
+  color: $white;
+  width: 100%;
+  height: 100%;
+
+  @include use-mobile() {
+    background-size: auto;
+  }
+
+  .title {
+    font-family: $header-font-family;
+    font-size: 68px;
+    text-align: center;
+
+    @include use-mobile() {
+      font-size: 39px;
+    }
+  }
+
+  .description {
+    font-family: $header-font-family;
+    font-size: 16px;
+    color: $white;
+    width: 432px;
+    padding: 0 26px;
+    margin: auto;
+
+    @include use-mobile() {
+      padding: 0px;
+      width: 100%;
+    }
+
+    &:last-of-type {
+      margin-top: 12px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .benefit {
+    padding: 24px;
+    margin: 0 auto;
+
+    &__section {
+      display: flex;
+      justify-content: center;
+      background-color: $martinique;
+      border-radius: 24px;
+      border: 1px solid $martinique;
+      overflow: hidden;
+      width: 656px;
+      margin: 0 auto;
+      gap: 1px;
+      padding: 0;
+      margin-top: 64px;
+
+      @include use-mobile() {
+        flex-wrap: wrap;
+        margin: 0 16px;
+        width: auto;
+      }
+    }
+
+    &__container {
+      background: #150542;
+      text-align: center;
+    }
+
+    &__title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 68px;
+    }
+  }
+
+  .advantages {
+    &__section {
+      display: flex;
+      justify-content: center;
+      background-color: $martinique;
+      border-radius: 24px;
+      border: 1px solid $martinique;
+      overflow: hidden;
+      gap: 1px;
+      max-width: 1104px;
+      margin: 0 auto;
+      margin-top: 120px;
+      padding: 0;
+
+      @include use-mobile() {
+        flex-wrap: wrap;
+        margin: 16px;
+      }
+    }
+
+    &__container {
+      background-color: #150542;
+      width: 275px;
+      text-align: center;
+      padding: 12px;
+
+      @include use-mobile() {
+        width: calc(50% - 1px);
+      }
+
+      .image {
+        color: $white;
+
+        &__container {
+          display: flex;
+          justify-content: center;
+          height: 30px;
+          margin: 12px;
+        }
+      }
+    }
+  }
 }
