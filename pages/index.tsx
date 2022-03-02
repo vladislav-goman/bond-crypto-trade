@@ -5,6 +5,7 @@ import { StatsSection } from '../src/components/section/StatsSection';
 import { TradingCards } from '../src/components/section/TradingCards';
 import { RatesSection } from '../src/components/section/RatesSection';
 import { CommunitySection } from '../src/components/section/CommunitySection';
+import { FundSection } from '../src/components/section/FundSection';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
         <TradingCards />
         <RatesSection />
         <CommunitySection />
+        <FundSection />
       </main>
     </>
   );

@@ -1,0 +1,62 @@
+@import '../../../styles/share/variables';
+
+.fund {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: #ffffff;
+  box-shadow: 0px 40px 100px rgba(26, 26, 26, 0.04);
+  border-radius: 24px;
+  font-family: $golos-font;
+  font-size: 16px;
+  margin-top: -130px;
+
+  @include use-mobile() {
+    margin: -130px 12px 0 12px;
+  }
+
+  .information {
+    &__title {
+      text-align: left;
+    }
+  }
+
+  .projects,
+  .allocation {
+    background: #fafafa;
+    border-radius: 24px;
+    padding: 24px 32px;
+
+    &__title {
+      font-weight: 500;
+      font-size: 49px;
+    }
+
+    &__description {
+      font-weight: 500;
+      font-size: 31px;
+    }
+
+    &:hover {
+      background-color: #eeedf0;
+      transition: $mid-transition;
+    }
+
+    @include use-mobile() {
+      background-size: auto;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  .gradient {
+    background: linear-gradient(to right, #6811be, #8c3fd9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}

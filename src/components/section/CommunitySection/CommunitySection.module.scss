@@ -9,14 +9,11 @@
       rgba(13, 0, 51, 0) 100%
     ),
     url('../../../images/community-bg.png') no-repeat;
-  background-size: 100%;
+  background-size: cover;
   color: $white;
   width: 100%;
   height: 100%;
-
-  @include use-mobile() {
-    background-size: auto;
-  }
+  padding-bottom: 192px;
 
   .title {
     font-family: $header-font-family;
@@ -37,7 +34,7 @@
     margin: auto;
 
     @include use-mobile() {
-      padding: 0px;
+      padding: 16px;
       width: 100%;
     }
 
@@ -45,6 +42,10 @@
       margin-top: 12px;
       padding: 0;
       text-align: center;
+
+      @include use-mobile() {
+        padding: 16px;
+      }
     }
   }
 
@@ -71,7 +72,6 @@
 
       @include use-mobile() {
         flex-wrap: wrap;
-        margin: 0 16px;
         width: auto;
       }
     }
@@ -104,7 +104,7 @@
 
       @include use-mobile() {
         flex-wrap: wrap;
-        margin: 16px;
+        margin: 16px 0;
       }
     }
 
