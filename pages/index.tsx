@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { Header } from '../src/components/layout/Header';
+import { Footer } from '../src/components/layout/Footer';
 import { Welcome } from '../src/components/section/Welcome';
 import { StatsSection } from '../src/components/section/StatsSection';
 import { TradingCards } from '../src/components/section/TradingCards';
@@ -10,8 +11,8 @@ import { FundSection } from '../src/components/section/FundSection';
 const Home: NextPage = () => {
   return (
     <>
+      <Header />
       <main>
-        <Header />
         <Welcome />
         <StatsSection />
         <TradingCards />
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <CommunitySection />
         <FundSection />
       </main>
+      <Footer />
     </>
   );
 };

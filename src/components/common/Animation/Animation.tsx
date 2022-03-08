@@ -6,9 +6,10 @@ import cx from 'classnames';
 export const Animation: React.FC<{
   children: React.ReactNode;
   className?: string;
-}> = ({ children, className = '' }) => {
+}> = ({ children, className = 'animate__fadeIn' }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.3,
+    triggerOnce: true,
   });
 
   return (

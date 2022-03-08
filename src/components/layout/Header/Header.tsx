@@ -13,7 +13,6 @@ export const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const bodyRef = useRef<HTMLElement>();
   const onClickHandler = () => {
-    console.log(bodyRef.current);
     if (bodyRef.current) {
       bodyRef.current.classList.toggle('menu-visible');
     }
@@ -60,7 +59,11 @@ export const Header: React.FC = () => {
               </div>
 
               <nav className={classes.nav}>
-                <AnchorLink offset="50" href="#about" className={classes.link}>
+                <AnchorLink
+                  offset="AnchorLink50"
+                  href="#about"
+                  className={classes.link}
+                >
                   Основатель
                 </AnchorLink>
                 <AnchorLink
