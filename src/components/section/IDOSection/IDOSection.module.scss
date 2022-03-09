@@ -1,0 +1,101 @@
+@import '../../../styles/share/variables';
+
+.ido {
+  &__title {
+    font-size: 96px;
+    background: linear-gradient(to bottom, #e8e9ebb2, #f6f8fa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__card {
+    background: $white;
+    box-shadow: 0px 40px 100px rgba(26, 26, 26, 0.04);
+    border-radius: 24px;
+    padding: 24px 32px;
+    margin-top: -30px;
+
+    &__small {
+      display: inline-flex;
+      margin: 5px 20px;
+      align-items: center;
+      padding: 16px 20px;
+      box-shadow: 0px 12px 32px rgba(26, 26, 26, 0.08);
+
+      @include use-mobile() {
+        display: block;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      color: #0d0033;
+      font-family: $header-font-family;
+      font-size: 49px;
+      font-weight: 500;
+      line-height: 56px;
+
+      span {
+        @include use-accent-gradient();
+      }
+    }
+    &__description {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.benefits {
+  margin: 0;
+  margin-top: -470px;
+
+  @include use-mobile() {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    margin: 0;
+    margin-left: 12px;
+    font-family: $header-font-family;
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  & :first-child {
+    margin-left: -10px;
+
+    @include use-mobile() {
+      flex: 1;
+      margin-left: 0;
+      margin-right: 4px;
+    }
+  }
+
+  & :nth-child(2) {
+    @include use-mobile() {
+      flex: 1;
+      margin-left: 4px;
+    }
+  }
+  & :nth-child(3) {
+    margin-left: 65px;
+
+    @include use-mobile() {
+      flex: 1 100%;
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+}
+
+.buttonGroup {
+  & button:first-child {
+    margin-right: 10px;
+  }
+}
