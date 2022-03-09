@@ -44,7 +44,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -62,7 +61,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -81,7 +79,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -99,7 +96,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -118,7 +114,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -138,7 +133,6 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              quality={100}
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
