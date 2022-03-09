@@ -7,13 +7,9 @@ import 'swiper/css/effect-cards';
 import classes from './TradingCardsCarousel.module.scss';
 import { Balance } from '../../common/Balance';
 
-const Highlight: React.FC = ({ children }) => (
-  <span className={classes.highlight}>{children}</span>
-);
+const Highlight: React.FC = ({ children }) => <span className={classes.highlight}>{children}</span>;
 
-const PaginationEl: React.FC = ({ children }) => (
-  <nav className={classes.pagination}>{children}</nav>
-);
+const PaginationEl: React.FC = ({ children }) => <nav className={classes.pagination}>{children}</nav>;
 
 export const TradingCardsCarousel: React.FC = () => {
   return (
@@ -34,8 +30,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            1. Быть <Highlight>ответственным</Highlight> и постоянно{' '}
-            <Highlight>учиться.</Highlight>
+            1. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
           <Balance balance={500.25} />
         </article>
@@ -44,8 +39,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            2. <Highlight>Делиться</Highlight> опытом,{' '}
-            <Highlight>учиться</Highlight> на ошибках окружающих
+            2. <Highlight>Делиться</Highlight> опытом, <Highlight>учиться</Highlight> на ошибках окружающих
           </h3>
           <Balance withUp balance={741.94} />
         </article>
@@ -54,8 +48,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            3. Быть <Highlight>ответственным</Highlight> и постоянно{' '}
-            <Highlight>учиться.</Highlight>
+            3. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
           <Balance withUp balance={2319.55} />
         </article>
@@ -64,8 +57,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            4. Быть <Highlight>ответственным</Highlight> и постоянно{' '}
-            <Highlight>учиться.</Highlight>
+            4. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
           <Balance withUp balance={5_771.01} />
         </article>
@@ -74,8 +66,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            5. Быть <Highlight>ответственным</Highlight> и постоянно{' '}
-            <Highlight>учиться.</Highlight>
+            5. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
           <Balance withUp balance={17_000.99} />
         </article>
@@ -84,8 +75,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            6. Быть <Highlight>ответственным</Highlight> и постоянно{' '}
-            <Highlight>учиться.</Highlight>
+            6. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
           <Balance withUp balance={24_500.73} />
         </article>

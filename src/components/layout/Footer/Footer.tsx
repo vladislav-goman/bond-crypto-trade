@@ -1,17 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import classes from './Footer.module.scss';
-import TelegramIcon from '../../../images/telegram.svg';
-import YoutubeIcon from '../../../images/youtube.svg';
-import InstagramIcon from '../../../images/instagram.svg';
+import { Telegram, Youtube, Instagram } from '../../icons';
 import StarIcon from '../../../images/white-star.svg';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} id="demo">
       <Container className={classes.demo}>
         <Row>
           <Col xl={{ span: 5, offset: 1 }}>
@@ -112,20 +109,20 @@ export const Footer: React.FC = () => {
                     <AnchorLink offset="50" href="#faq" className={classes.link__item}>
                       Команда
                     </AnchorLink>
-                    <AnchorLink offset="50" href="#faq" className={classes.link__item}>
+                    <AnchorLink offset="50" href="#demo" className={classes.link__item}>
                       Демо
                     </AnchorLink>
                   </div>
                 </div>
                 <div className={classes.social}>
                   <a className={classes.social__icon} href="https://telegram.com" target="_blank" rel="noreferrer">
-                    <Image src={TelegramIcon} alt="Telegram link" />
+                    <Telegram />
                   </a>
                   <a className={classes.social__icon} href="https://youtube.com" target="_blank" rel="noreferrer">
-                    <Image src={YoutubeIcon} alt="Youtube link" />
+                    <Youtube />
                   </a>
                   <a className={classes.social__icon} href="https://instagram.com" target="_blank" rel="noreferrer">
-                    <Image src={InstagramIcon} alt="Instagram link" />
+                    <Instagram />
                   </a>
                 </div>
               </nav>

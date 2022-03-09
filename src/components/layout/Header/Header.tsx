@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import cx from 'classnames';
 import classes from './Header.module.scss';
-import PhoneIcon from '../../../images/monaco.svg';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
 import { Button } from '../../common/Button';
 
@@ -42,14 +39,7 @@ export const Header: React.FC = () => {
   }, [tweakHeader]);
 
   return (
-    <header
-      className={cx(
-        classes.header,
-        { [classes.active]: isActive },
-        'animate__animated',
-        'animate__fadeIn'
-      )}
-    >
+    <header className={cx(classes.header, { [classes.active]: isActive }, 'animate__animated', 'animate__fadeIn')}>
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -59,38 +49,22 @@ export const Header: React.FC = () => {
               </div>
 
               <nav className={classes.nav}>
-                <AnchorLink
-                  offset="AnchorLink50"
-                  href="#about"
-                  className={classes.link}
-                >
+                <AnchorLink offset="AnchorLink50" href="#about" className={classes.link}>
                   Основатель
                 </AnchorLink>
-                <AnchorLink
-                  offset="50"
-                  href="#rates-section"
-                  className={classes.link}
-                >
+                <AnchorLink offset="50" href="#rates-section" className={classes.link}>
                   Тарифы
                 </AnchorLink>
-                <AnchorLink
-                  offset="50"
-                  href="#community-section"
-                  className={classes.link}
-                >
+                <AnchorLink offset="50" href="#community-section" className={classes.link}>
                   Комьюнити
                 </AnchorLink>
-                <AnchorLink
-                  offset="50"
-                  href="#contact"
-                  className={classes.link}
-                >
+                <AnchorLink offset="50" href="#contact" className={classes.link}>
                   Отзывы
                 </AnchorLink>
                 <AnchorLink offset="50" href="#faq" className={classes.link}>
                   Команда
                 </AnchorLink>
-                <AnchorLink offset="50" href="#faq" className={classes.link}>
+                <AnchorLink offset="50" href="#demo" className={classes.link}>
                   Демо
                 </AnchorLink>
                 <AnchorLink offset="50" href="#faq">
@@ -104,45 +78,28 @@ export const Header: React.FC = () => {
                 })}
               >
                 <div className={classes.mobileNav}>
-                  <AnchorLink
-                    offset="30"
-                    href="#about"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    About us
+                  <AnchorLink offset="30" href="#about" className={classes.link} onClick={onLinkClickHandler}>
+                    Основатель
+                  </AnchorLink>
+                  <AnchorLink offset="30" href="#rates-section" className={classes.link} onClick={onLinkClickHandler}>
+                    Тарифы
                   </AnchorLink>
                   <AnchorLink
                     offset="30"
-                    href="#packages"
+                    href="#community-section"
                     className={classes.link}
                     onClick={onLinkClickHandler}
                   >
-                    Picnic packages
+                    Комьюнити
                   </AnchorLink>
-                  <AnchorLink
-                    offset="30"
-                    href="#gallery"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    Gallery
+                  <AnchorLink offset="30" href="#gallery" className={classes.link} onClick={onLinkClickHandler}>
+                    Отзывы
                   </AnchorLink>
-                  <AnchorLink
-                    offset="30"
-                    href="#contact"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    Contact us
+                  <AnchorLink offset="30" href="#contact" className={classes.link} onClick={onLinkClickHandler}>
+                    Команда
                   </AnchorLink>
-                  <AnchorLink
-                    offset="30"
-                    href="#faq"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    FAQ
+                  <AnchorLink offset="30" href="#demo" className={classes.link} onClick={onLinkClickHandler}>
+                    Демо
                   </AnchorLink>
                   <AnchorLink offset="30" href="tel:+18184046994">
                     <Button title="Записаться" className={classes.link} />
@@ -150,11 +107,7 @@ export const Header: React.FC = () => {
                 </div>
               </nav>
 
-              <HamburgerMenu
-                onClick={onClickHandler}
-                isOpen={showMobileMenu}
-                className={classes.hamburger}
-              />
+              <HamburgerMenu onClick={onClickHandler} isOpen={showMobileMenu} className={classes.hamburger} />
             </div>
           </div>
         </div>

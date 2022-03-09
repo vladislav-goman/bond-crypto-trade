@@ -12,6 +12,11 @@
   overflow: hidden;
   background: url('../../../images/rates-description-bg.png') no-repeat bottom;
 
+  .imageContainer {
+    position: relative;
+    left: 32px;
+  }
+
   &::before {
     content: '';
     position: absolute;
