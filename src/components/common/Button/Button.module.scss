@@ -11,6 +11,7 @@
   transition: $mid-transition;
   cursor: pointer;
   text-decoration: none;
+  display: block;
 
   &:hover {
     background-color: $white;

@@ -9,7 +9,7 @@ import WithCar from '../../../images/founder/with-car.png';
 
 export const Founder: React.FC = () => {
   return (
-    <section id="team-section" className={classes.team}>
+    <section id="founder-section" className={classes.team}>
       <Container>
         <Row>
           <Col md={12}>

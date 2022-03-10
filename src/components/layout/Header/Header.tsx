@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import cx from 'classnames';
+import Link from 'next/link';
 import classes from './Header.module.scss';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
 import { Button } from '../../common/Button';
@@ -44,12 +45,14 @@ export const Header: React.FC = () => {
         <div className="row">
           <div className="col-md-12">
             <div className={classes.inner}>
-              <div className={classes.logo__container}>
-                <h3 className={classes.label}>BondCryptoTrade</h3>
-              </div>
+              <Link href="/" passHref>
+                <a className={classes.logo__container}>
+                  <h3 className={classes.label}>BondCryptoTrade</h3>
+                </a>
+              </Link>
 
               <nav className={classes.nav}>
-                <AnchorLink offset="AnchorLink50" href="#about" className={classes.link}>
+                <AnchorLink offset="50" href="#founder-section" className={classes.link}>
                   Основатель
                 </AnchorLink>
                 <AnchorLink offset="50" href="#rates-section" className={classes.link}>
@@ -67,9 +70,7 @@ export const Header: React.FC = () => {
                 <AnchorLink offset="50" href="#demo" className={classes.link}>
                   Демо
                 </AnchorLink>
-                <AnchorLink offset="50" href="#faq">
-                  <Button title="Записаться" className={classes.apply} />
-                </AnchorLink>
+                <Button title="Записаться" className={classes.apply} />
               </nav>
 
               <nav
@@ -78,7 +79,7 @@ export const Header: React.FC = () => {
                 })}
               >
                 <div className={classes.mobileNav}>
-                  <AnchorLink offset="30" href="#about" className={classes.link} onClick={onLinkClickHandler}>
+                  <AnchorLink offset="30" href="#founder-section" className={classes.link} onClick={onLinkClickHandler}>
                     Основатель
                   </AnchorLink>
                   <AnchorLink offset="30" href="#rates-section" className={classes.link} onClick={onLinkClickHandler}>

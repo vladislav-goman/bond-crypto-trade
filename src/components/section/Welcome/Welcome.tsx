@@ -3,6 +3,7 @@ import classes from './Welcome.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import cx from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button, ButtonType } from '../../common/Button';
 import { BackgroundChart } from '../../common/BackgroundChart';
 import MonacoIcon from '../../../images/monaco.svg';
@@ -24,14 +25,13 @@ export const Welcome: React.FC = () => {
               </Animation>
               <Animation className={'animate__fadeIn'}>
                 <h1 className={cx(classes.header)}>
-                  Лучшее обучение{' '}
-                  <span className={classes.highlight}>трейдингу.</span>
+                  Лучшее обучение <span className={classes.highlight}>трейдингу.</span>
                 </h1>
               </Animation>
               <Animation className={'animate__fadeIn'}>
                 <article className={cx(classes.description)}>
-                  Результаты зависят от опыта и личной дисциплины. Улучшить
-                  навыки и повысить продуктивность можно на нашем курсе.
+                  Результаты зависят от опыта и личной дисциплины. Улучшить навыки и повысить продуктивность можно на
+                  нашем курсе.
                 </article>
               </Animation>
               <div className={classes.buttonGroup}>
@@ -39,7 +39,9 @@ export const Welcome: React.FC = () => {
                   <Button title="Регистрация" />
                 </Animation>
                 <Animation className={'animate__fadeInRight'}>
-                  <Button title="Подробнее" type={ButtonType.secondary} />
+                  <Link href="/ido" passHref>
+                    <Button isLink title="Подробнее" type={ButtonType.secondary} />
+                  </Link>
                 </Animation>
               </div>
             </div>
