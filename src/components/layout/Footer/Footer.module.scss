@@ -7,6 +7,10 @@
   padding: 2rem 0;
   margin-top: 80px;
 
+  @include use-tablet() {
+    gap: 1rem;
+  }
+
   &.dark {
     margin-top: 0;
     .inner {
@@ -48,6 +52,7 @@
     font-size: 1rem;
     color: #0d0033;
     margin: 0;
+    text-decoration: none;
 
     @include use-tablet() {
       font-size: 1rem;
@@ -64,21 +69,12 @@
     justify-content: space-between;
     padding: 1.5rem 2rem;
 
-    @include use-mobile() {
+    @include use-tablet() {
       flex-direction: column;
       gap: 2rem;
     }
-  }
-
-  .group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
 
     @include use-mobile() {
-      flex-direction: column;
-      gap: 20px;
     }
   }
 
@@ -103,9 +99,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: auto;
+    margin-left: 2rem;
+
+    @include use-tablet() {
+      order: 3;
+    }
 
     @include use-mobile() {
+      margin: 0;
       flex-direction: column;
+      order: initial;
     }
 
     &__item {
