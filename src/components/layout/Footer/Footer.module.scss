@@ -1,7 +1,14 @@
 @import '../../../styles/share/variables';
 
 .footerWithDemo {
+  background-image: url('../../../images/dark-footer-bg.png');
+  background-repeat: no-repeat;
+  background-position: center 150%;
   background-color: #0d0033;
+
+  @include use-mobile() {
+    background-position: center 120%;
+  }
 }
 .footer {
   padding: 2rem 0;
@@ -103,6 +110,7 @@
     margin-left: 2rem;
 
     @include use-tablet() {
+      margin: auto;
       order: 3;
     }
 

@@ -15,13 +15,16 @@ h6 {
   }
 }
 
+.app-wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   color: $secondary-color;
   font-family: $font-family;
   background-color: $background-color;
-  width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
 
   @include use-mobile() {
     .container {
@@ -31,6 +34,23 @@ body {
 
   &.menu-visible {
     overflow-y: hidden;
+  }
+
+  .tablet-only {
+    display: none;
+    @include use-tablet() {
+      display: block;
+    }
+    @include use-mobile() {
+      display: none;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+    @include use-mobile() {
+      display: block;
+    }
   }
 }
 

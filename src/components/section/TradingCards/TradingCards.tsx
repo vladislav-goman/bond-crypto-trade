@@ -10,28 +10,24 @@ export const TradingCards: React.FC = () => {
     <section id="cards-section" className={classes.tradingCards}>
       <Container>
         <Row>
-          <Col md={{ span: 4 }}>
+          <Col xl={{ span: 4 }}>
             <Animation className={'animate__fadeInLeft'}>
               <div className={classes.inner}>
-                <Badge>О трейдинге и инвестициях</Badge>
+                <Badge className={classes.badge}>О трейдинге и инвестициях</Badge>
                 <h2 className={classes.title}>Как начать торговать?</h2>
                 <p className={classes.description}>
-                  Путь трейдера начинается с осознания, что в торговле нет
-                  быстрых результатов.
+                  Путь трейдера начинается с осознания, что в торговле нет быстрых результатов.
                 </p>
                 <p className={classes.description}>
-                  Но не нужно отчаиваться, главное следовать небольшим сводом
-                  правил:
+                  Но не нужно отчаиваться, главное следовать небольшим сводом правил:
                 </p>
               </div>
             </Animation>
           </Col>
-          <Col md={{ span: 7, offset: 1 }}>
-            <div className={classes.inner}>
-              <Animation className={'animate__fadeInRight'}>
-                <TradingCardsCarousel />
-              </Animation>
-            </div>
+          <Col xl={{ span: 7, offset: 1 }}>
+            <Animation className={'animate__fadeInRight'}>
+              <TradingCardsCarousel />
+            </Animation>
           </Col>
         </Row>
       </Container>

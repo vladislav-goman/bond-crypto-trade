@@ -44,10 +44,13 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 
+    @include use-tablet() {
+      margin-bottom: 48px;
+    }
+
     @include use-mobile() {
       display: flex;
       flex-direction: column;
-      margin-bottom: 48px;
     }
 
     .item {

@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
   z-index: 100;
   transition: $mid-transition;
@@ -18,12 +18,17 @@
   &.active {
     background-color: $white;
     border-color: $secondary-color;
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(20px);
+    }
   }
 
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 101;
   }
 
   .label {
@@ -64,13 +69,24 @@
     display: flex;
     align-items: center;
 
-    @include use-mobile() {
+    @include use-tablet() {
       display: none;
+    }
+  }
+
+  .group {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+
+    @include use-tablet() {
+      display: flex;
     }
   }
 
   .link {
     text-decoration: none;
+    font-family: $header-font-family;
     color: $secondary-color;
     font-weight: 500;
     font-size: 14px;
@@ -78,13 +94,17 @@
     margin-right: 2rem;
 
     @include use-tablet() {
-      font-size: 16px;
-      margin-right: 1rem;
+      font-size: 31px;
+      line-height: 40px;
+      font-weight: 500;
+      margin-right: 0;
+      margin-bottom: 2rem;
     }
 
     @include use-mobile() {
-      margin-right: 0;
-      margin-bottom: 3rem;
+      &.linkBottom {
+        margin-top: auto;
+      }
     }
 
     &:hover {
@@ -101,12 +121,17 @@
     border: none;
     border-radius: 12px;
     backdrop-filter: blur(12px);
+
+    @include use-mobile() {
+      width: 100%;
+      margin-top: auto;
+    }
   }
 
   .hamburger {
     display: none;
 
-    @include use-mobile() {
+    @include use-tablet() {
       display: block;
     }
   }
@@ -117,15 +142,16 @@
     opacity: 0;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: fixed;
     background-color: $white;
     z-index: -1;
     transform: translateX(100vw);
     transition: $mid-transition;
+    overflow-y: auto;
 
-    @include use-mobile() {
+    @include use-tablet() {
       display: block;
     }
 
@@ -142,5 +168,10 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    min-height: 600px;
+
+    @include use-mobile() {
+      padding: 68px 16px 24px;
+    }
   }
 }

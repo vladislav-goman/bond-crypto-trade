@@ -17,19 +17,61 @@
   }
 
   .inner {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 5fr 3fr;
+    grid-template-areas:
+      'X Y W'
+      'X Z W';
+    grid-gap: 1rem;
+
+    @include use-tablet() {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'X Y' 'Z W';
+    }
 
     @include use-mobile() {
-      gap: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .item1 {
+      grid-area: X;
+
+      @include use-mobile() {
+        height: 364px;
+      }
+    }
+
+    .item2 {
+      grid-area: Y;
+
+      @include use-mobile() {
+        height: 312px;
+      }
+    }
+
+    .item3 {
+      grid-area: Z;
+    }
+
+    .item4 {
+      grid-area: W;
+
+      @include use-tablet() {
+        .card {
+          align-items: center;
+        }
+        .content {
+          width: 100%;
+          max-width: 320px;
+        }
+      }
     }
   }
 
   .content {
     position: relative;
-    height: 100%;
 
     &.stretch {
       position: absolute;
@@ -37,8 +79,7 @@
       height: unset;
       bottom: 2rem;
       left: 0;
-      @include use-mobile() {
-        position: relative;
+      @include use-tablet() {
         bottom: 0;
       }
     }
@@ -80,7 +121,7 @@
 
   .marginLeft {
     margin-left: 30px;
-    @include use-mobile() {
+    @include use-tablet() {
       margin-left: 0;
     }
   }
@@ -92,10 +133,17 @@
   &.horizontal {
     flex-direction: row;
     padding-bottom: 0;
-    @include use-mobile() {
+
+    @include use-tablet() {
       flex-direction: column;
       padding: 12px 32px 24px;
+      min-height: 364px;
     }
+
+    @include use-mobile() {
+      min-height: unset;
+    }
+
     .content {
       display: flex;
       align-items: center;
@@ -111,9 +159,5 @@
     .description {
       text-align: center;
     }
-  }
-
-  @include use-mobile() {
-    margin-bottom: 1rem;
   }
 }

@@ -6,6 +6,10 @@ import { A11y } from 'swiper';
 import Image from 'next/image';
 import { Telegram, Youtube, Instagram } from '../../icons';
 import WithCar from '../../../images/founder/with-car.png';
+import WithGlass from '../../../images/founder/with-glass.png';
+import Jacket from '../../../images/founder/jacket.png';
+import Jacht from '../../../images/founder/jacht.png';
+import BMV from '../../../images/founder/bmw.png';
 
 export const Founder: React.FC = () => {
   return (
@@ -61,8 +65,8 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              src={WithCar}
-                              alt="Игнат на фоне машины"
+                              src={WithGlass}
+                              alt="Игнат с бокалом вина"
                               layout="responsive"
                             />
                           </div>
@@ -79,8 +83,8 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              src={WithCar}
-                              alt="Игнат на фоне машины"
+                              src={Jacket}
+                              alt="Игнат на фоне домов"
                               layout="responsive"
                             />
                           </div>
@@ -96,8 +100,8 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
-                              src={WithCar}
-                              alt="Игнат на фоне машины"
+                              src={Jacht}
+                              alt="Игнат на частной лодке"
                               layout="responsive"
                             />
                           </div>
@@ -112,12 +116,7 @@ export const Founder: React.FC = () => {
                       <SwiperSlide className={classes.slide}>
                         <article className={classes.card}>
                           <div className={classes.image__container}>
-                            <Image
-                              className={classes.image}
-                              src={WithCar}
-                              alt="Игнат на фоне машины"
-                              layout="responsive"
-                            />
+                            <Image className={classes.image} src={BMV} alt="Игнат на фоне машины" layout="responsive" />
                           </div>
                           <h4 className={classes.header}>2021-2022 год </h4>
                           <p className={classes.description}>

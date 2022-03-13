@@ -10,6 +10,7 @@ export const SVGAnimation: React.FC<{
 }> = ({ animationData, className }) => {
   const { ref, inView } = useInView({
     threshold: 0,
+    triggerOnce: true,
   });
 
   const defaultOptions = {
@@ -23,11 +24,7 @@ export const SVGAnimation: React.FC<{
 
   return (
     <div className={cx(className)} ref={ref}>
-      <Lottie
-        options={defaultOptions}
-        isStopped={!inView}
-        style={{ width: '100%', height: '100%' }}
-      />
+      <Lottie options={defaultOptions} isStopped={!inView} style={{ width: '100%', height: '100%' }} />
     </div>
   );
 };

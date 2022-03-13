@@ -12,8 +12,13 @@
   .label {
     color: $tertiary-color;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 16px;
     padding-right: 6px;
+
+    @include use-mobile() {
+      font-size: 13px;
+    }
   }
 
   .highlight {
@@ -22,6 +27,11 @@
 
   .header {
     margin-bottom: 24px;
+
+    @include use-tablet() {
+      font-size: 49px;
+      line-height: 56px;
+    }
   }
 
   .description {
@@ -31,6 +41,16 @@
     margin-bottom: 40px;
     font-family: $header-font-family;
     color: $secondary-color;
+
+    @include use-tablet() {
+      max-width: 710px;
+    }
+
+    @include use-mobile() {
+      max-width: 343px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   .buttonGroup {
@@ -38,5 +58,16 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+
+    @include use-mobile() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      button,
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 }

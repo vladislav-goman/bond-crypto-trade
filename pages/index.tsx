@@ -12,7 +12,7 @@ import { IDOSection } from '../src/components/section/IDOSection';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="app-wrapper">
       <Header />
       <main>
         <Welcome />
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <IDOSection />
       </main>
       <FooterWithDemo />
-    </>
+    </div>
   );
 };
 

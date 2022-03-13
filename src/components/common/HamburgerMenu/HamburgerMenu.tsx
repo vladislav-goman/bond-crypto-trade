@@ -14,12 +14,9 @@ export const HamburgerMenu: React.FC<{
         [classes.open]: isOpen,
       })}
     >
-      <div className={classes.leftTop}></div>
-      <div className={classes.rightTop}></div>
-      <div className={classes.leftMedium}></div>
-      <div className={classes.rightMedium}></div>
-      <div className={classes.leftBottom}></div>
-      <div className={classes.rightBottom}></div>
+      <div className={cx(classes.top)}></div>
+      <div className={cx(classes.medium)}></div>
+      <div className={cx(classes.bottom)}></div>
     </button>
   );
 };

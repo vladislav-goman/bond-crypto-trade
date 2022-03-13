@@ -25,7 +25,8 @@ export const Welcome: React.FC = () => {
               </Animation>
               <Animation className={'animate__fadeIn'}>
                 <h1 className={cx(classes.header)}>
-                  Лучшее обучение <span className={classes.highlight}>трейдингу.</span>
+                  Лучшее обучение <span className={classes.highlight}>трейдингу</span> и{' '}
+                  <span className={classes.highlight}>инвестициям</span>.
                 </h1>
               </Animation>
               <Animation className={'animate__fadeIn'}>

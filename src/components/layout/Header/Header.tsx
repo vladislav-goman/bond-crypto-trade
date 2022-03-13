@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
                 <AnchorLink offset="50" href="#demo" className={classes.link}>
                   Демо
                 </AnchorLink>
-                <Button title="Записаться" className={classes.apply} />
+                <Button title="Записаться" className={cx(classes.apply)} />
               </nav>
 
               <nav
@@ -102,13 +102,15 @@ export const Header: React.FC = () => {
                   <AnchorLink offset="30" href="#demo" className={classes.link} onClick={onLinkClickHandler}>
                     Демо
                   </AnchorLink>
-                  <AnchorLink offset="30" href="tel:+18184046994">
-                    <Button title="Записаться" className={classes.link} />
-                  </AnchorLink>
+                  <Button title="Записаться" className={cx(classes.apply, 'mobile-only')} />
                 </div>
               </nav>
 
-              <HamburgerMenu onClick={onClickHandler} isOpen={showMobileMenu} className={classes.hamburger} />
+              <div className={classes.group}>
+                <HamburgerMenu onClick={onClickHandler} isOpen={showMobileMenu} className={classes.hamburger} />
+
+                <Button title="Записаться" className={cx(classes.apply, 'tablet-only')} />
+              </div>
             </div>
           </div>
         </div>

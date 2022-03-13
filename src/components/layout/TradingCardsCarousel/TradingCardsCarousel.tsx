@@ -32,7 +32,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             1. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
-          <Balance balance={500.25} />
+          <Balance className={classes.balance} balance={500.25} />
         </article>
       </SwiperSlide>
       <SwiperSlide className={classes.slide}>
@@ -41,7 +41,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             2. <Highlight>Делиться</Highlight> опытом, <Highlight>учиться</Highlight> на ошибках окружающих
           </h3>
-          <Balance withUp balance={741.94} />
+          <Balance className={classes.balance} withUp balance={741.94} />
         </article>
       </SwiperSlide>
       <SwiperSlide className={classes.slide}>
@@ -50,7 +50,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             3. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
-          <Balance withUp balance={2319.55} />
+          <Balance className={classes.balance} withUp balance={2319.55} />
         </article>
       </SwiperSlide>
       <SwiperSlide className={classes.slide}>
@@ -59,7 +59,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             4. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
-          <Balance withUp balance={5_771.01} />
+          <Balance className={classes.balance} withUp balance={5_771.01} />
         </article>
       </SwiperSlide>
       <SwiperSlide className={classes.slide}>
@@ -68,7 +68,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             5. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
-          <Balance withUp balance={17_000.99} />
+          <Balance className={classes.balance} withUp balance={17_000.99} />
         </article>
       </SwiperSlide>
       <SwiperSlide className={classes.slide}>
@@ -77,7 +77,7 @@ export const TradingCardsCarousel: React.FC = () => {
           <h3 className={classes.title}>
             6. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
           </h3>
-          <Balance withUp balance={24_500.73} />
+          <Balance className={classes.balance} withUp balance={24_500.73} />
         </article>
       </SwiperSlide>
     </Swiper>

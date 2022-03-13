@@ -3,15 +3,18 @@
 .container {
   height: 100%;
 
-  @include use-mobile() {
-    padding: 0 2rem;
-  }
-
   .card {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    height: 100%;
+
+    @include use-tablet() {
+      .balance {
+        margin-top: auto;
+      }
+    }
   }
 
   .slide {
@@ -33,7 +36,9 @@
     margin-bottom: 86px;
 
     @include use-mobile() {
+      margin-top: 1rem;
       font-size: 1.5rem;
+      margin-bottom: 54px;
     }
   }
 
