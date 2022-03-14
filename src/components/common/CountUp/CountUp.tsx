@@ -31,8 +31,8 @@ export const CountUp: React.FC<{
   }, [inView, start]);
 
   return (
-    <div ref={ref} className={className}>
+    <span ref={ref} className={className}>
       <span ref={countUpRef} />
-    </div>
+    </span>
   );
 };

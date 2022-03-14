@@ -1,8 +1,49 @@
 @import '../../../styles/share/variables';
 
 .program {
-  margin-top: 30vh;
   padding-bottom: 0;
+  background-image: url('../../../images/ido-program-bg.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  .title {
+    text-align: left;
+    font-size: 68px;
+    line-height: 72px;
+    margin-bottom: 40px;
+    max-width: 991px;
+    color: #0d0033;
+
+    @include use-tablet() {
+      font-size: 49px;
+      line-height: 56px;
+      margin-bottom: 20px;
+    }
+
+    @include use-mobile() {
+      font-size: 31px;
+      line-height: 40px;
+    }
+  }
+
+  .paragraph {
+    font-family: $header-font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 140px;
+    max-width: 432px;
+
+    @include use-mobile() {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .highlight {
+    color: $accent-color;
+  }
 
   .sticky {
     max-width: 526px;

@@ -16,15 +16,17 @@ h6 {
 }
 
 .app-wrapper {
-  width: 100vw;
+  width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
   color: $secondary-color;
   font-family: $font-family;
   background-color: $background-color;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   @include use-mobile() {
     .container {

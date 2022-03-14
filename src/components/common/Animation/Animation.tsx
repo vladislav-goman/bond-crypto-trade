@@ -2,6 +2,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import cx from 'classnames';
+import classes from './Animation.module.scss';
 
 export const Animation: React.FC<{
   children: React.ReactNode;
@@ -15,8 +16,8 @@ export const Animation: React.FC<{
   return (
     <div
       ref={ref}
-      className={cx('animate__animated', { [className]: inView })}
-      style={{ opacity: 0, height: '100%' }}
+      className={cx(classes.animation, 'animate__animated', { [className]: inView })}
+      style={{ opacity: 0 }}
     >
       {children}
     </div>
