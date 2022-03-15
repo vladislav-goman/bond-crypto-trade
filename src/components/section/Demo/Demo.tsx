@@ -67,16 +67,16 @@ export const Demo: React.FC = () => {
               <input className={classes.input} id="name" placeholder="Александр Сергеев"></input>
             </div>
             <div className={classes.input__group}>
-              <label className={classes.input__label} htmlFor="name">
+              <label className={classes.input__label} htmlFor="email">
                 Email
               </label>
-              <input className={classes.input} type="email" id="name" placeholder="example@mail.com"></input>
+              <input className={classes.input} type="email" id="email" placeholder="example@mail.com"></input>
             </div>
             <div className={classes.input__group}>
-              <label className={classes.input__label} htmlFor="name">
+              <label className={classes.input__label} htmlFor="tel">
                 Телефон
               </label>
-              <input className={classes.input} type="tel" id="name" placeholder="+375 44 999 99 99"></input>
+              <input className={classes.input} type="tel" id="tel" placeholder="+375 44 999 99 99"></input>
             </div>
             <input className={classes.submit} type="submit" value="Отправить" />
           </form>

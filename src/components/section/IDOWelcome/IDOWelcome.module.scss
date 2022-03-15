@@ -1,0 +1,235 @@
+@import '../../../styles/share/variables';
+
+.welcome {
+  padding-top: 80px;
+  padding-bottom: 10rem;
+
+  @media screen and (max-width: 1399.5px) {
+    padding-top: 56px;
+    padding-bottom: 14rem;
+  }
+
+  @media screen and (max-width: 991.5px) {
+    padding-top: 56px;
+    padding-bottom: 18rem;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    background-color: #0d0033;
+    padding: 164px 1rem 188px;
+    border-radius: 32px;
+    background-image: url('../../../images/ido-bg.png');
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    position: relative;
+
+    @include use-tablet() {
+      padding: 196px 1rem 196px;
+      gap: 40px;
+    }
+
+    @include use-mobile() {
+      padding: 148px 1rem 280px;
+      gap: 36px;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @include use-tablet() {
+      gap: 24px;
+    }
+
+    @include use-mobile() {
+      gap: 8px;
+    }
+  }
+
+  .title {
+    margin: 0;
+    color: $white;
+
+    @include use-tablet() {
+      font-size: 49px;
+      line-height: 56px;
+    }
+
+    @include use-mobile() {
+      font-size: 39px;
+      line-height: 48px;
+    }
+  }
+
+  .description {
+    color: $white;
+    font-family: $header-font-family;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+    max-width: 656px;
+    text-align: center;
+
+    @include use-tablet() {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include use-mobile() {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+
+    @include use-mobile() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      button,
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .primaryButton {
+    background-color: $white;
+    color: #0d0033;
+    border-color: $white;
+
+    &:hover {
+      background-color: #251947;
+      color: $white;
+    }
+  }
+
+  .secondaryButton {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      background-color: #251947;
+      border-color: $white;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 100px;
+    transform: translateY(100%);
+    left: 0;
+    width: 100%;
+  }
+
+  .highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: $white;
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      svg {
+        max-height: 26px;
+      }
+    }
+  }
+
+  .card {
+    background: #fafafa;
+    flex-grow: 1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    transition: $mid-transition;
+    cursor: pointer;
+
+    &:hover {
+      background: #eeedf0;
+    }
+
+    .label {
+      font-size: 25px;
+      line-height: 32px;
+      color: #3c364d;
+      text-align: left;
+      margin: 0;
+
+      @include use-tablet() {
+        font-weight: 400;
+      }
+
+      @include use-mobile() {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .info {
+      font-size: 49px;
+      line-height: 56px;
+      @include use-accent-gradient();
+      text-align: left;
+      margin: 0;
+
+      @include use-mobile() {
+        font-size: 39px;
+        line-height: 48px;
+      }
+    }
+
+    .muted {
+      color: #ccc8d5;
+      position: relative;
+      font-size: 49px;
+      line-height: 56px;
+      font-weight: 500;
+      font-family: $header-font-family;
+
+      @include use-mobile() {
+        font-size: 39px;
+        line-height: 48px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%) rotate(-14.47deg);
+        left: 0;
+        background-color: #ccc8d5;
+        height: 3px;
+        width: 100%;
+      }
+    }
+  }
+}
