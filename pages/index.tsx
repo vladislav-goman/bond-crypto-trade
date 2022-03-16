@@ -10,6 +10,7 @@ import { CommunitySection } from '../src/components/section/CommunitySection';
 import { FundSection } from '../src/components/section/FundSection';
 import { IDOSection } from '../src/components/section/IDOSection';
 import { CommentSection } from '../src/components/section/CommentSection';
+import { TeamSection } from '../src/components/section/TeamSection';
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
         <FundSection />
         <IDOSection />
         <CommentSection />
+        <TeamSection />
       </main>
       <FooterWithDemo />
     </div>

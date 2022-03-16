@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
                 <AnchorLink offset="50" href="#comment-section" className={classes.link}>
                   Отзывы
                 </AnchorLink>
-                <AnchorLink offset="50" href="#faq" className={classes.link}>
+                <AnchorLink offset="50" href="#team-section" className={classes.link}>
                   Команда
                 </AnchorLink>
                 <AnchorLink offset="50" href="#demo" className={classes.link}>
@@ -93,10 +93,10 @@ export const Header: React.FC = () => {
                   >
                     Комьюнити
                   </AnchorLink>
-                  <AnchorLink offset="30" href="#gallery" className={classes.link} onClick={onLinkClickHandler}>
+                  <AnchorLink offset="30" href="#comment-section" className={classes.link} onClick={onLinkClickHandler}>
                     Отзывы
                   </AnchorLink>
-                  <AnchorLink offset="30" href="#contact" className={classes.link} onClick={onLinkClickHandler}>
+                  <AnchorLink offset="30" href="#team-section" className={classes.link} onClick={onLinkClickHandler}>
                     Команда
                   </AnchorLink>
                   <AnchorLink offset="30" href="#demo" className={classes.link} onClick={onLinkClickHandler}>
