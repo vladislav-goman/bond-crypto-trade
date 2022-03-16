@@ -27,7 +27,7 @@ export const Footer: React.FC<{ dark?: boolean }> = ({ dark = false }) => {
                   <AnchorLink offset="50" href="#community-section" className={classes.link__item}>
                     Комьюнити
                   </AnchorLink>
-                  <AnchorLink offset="50" href="#contact" className={classes.link__item}>
+                  <AnchorLink offset="50" href="#comment-section" className={classes.link__item}>
                     Отзывы
                   </AnchorLink>
                   <AnchorLink offset="50" href="#faq" className={classes.link__item}>

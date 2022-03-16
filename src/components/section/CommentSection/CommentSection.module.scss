@@ -1,0 +1,89 @@
+@import '../../../styles/share/variables';
+
+.header {
+  display: flex;
+}
+
+.slide {
+  width: 432px;
+}
+
+.previousButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: $white;
+  border-radius: 16px;
+  border: 1px solid #eeedf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.previousButton {
+  margin-right: 6px;
+}
+
+.nextButton {
+  margin-left: 6px;
+  right: 0;
+}
+
+.card {
+  background: $white;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid #eeedf0;
+}
+
+.personalDetails {
+  margin-left: 16px;
+}
+
+.fullName {
+  font-size: 25px;
+  color: #0d0033;
+  font-family: $header-font-family;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+}
+
+.position {
+  color: #3c364d;
+  font-size: 13px;
+}
+
+.description {
+  font-size: 16px;
+  color: #031940;
+  font-family: $header-font-family;
+}
+
+.date {
+  font-family: $header-font-family;
+  color: #777480;
+  font-size: 10px;
+}
+
+.comment {
+  &__title {
+    font-size: 68px;
+    color: #0d0033;
+    font-family: $header-font-family;
+    font-weight: 500;
+    width: 544px;
+    text-align: left;
+    margin-bottom: 40px;
+
+    @include use-mobile() {
+      font-size: 39px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

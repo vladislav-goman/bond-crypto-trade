@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
                 <AnchorLink offset="50" href="#community-section" className={classes.link}>
                   Комьюнити
                 </AnchorLink>
-                <AnchorLink offset="50" href="#contact" className={classes.link}>
+                <AnchorLink offset="50" href="#comment-section" className={classes.link}>
                   Отзывы
                 </AnchorLink>
                 <AnchorLink offset="50" href="#faq" className={classes.link}>
