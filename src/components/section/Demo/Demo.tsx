@@ -1,12 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
+import { VideoSection } from '../VideoSection';
 import classes from './Demo.module.scss';
 import StarIcon from '../../../images/white-star.svg';
 
 export const Demo: React.FC = () => {
   return (
     <Container id="demo" className={classes.demo}>
+      <VideoSection />
       <Row>
         <Col xl={{ span: 5, offset: 1 }}>
           <h2 className={classes.header}>Получите демо материал</h2>

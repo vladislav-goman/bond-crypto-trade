@@ -1,5 +1,12 @@
 @import '../../../styles/share/variables';
 
+.team {
+  padding-bottom: 400px;
+
+  @include use-mobile() {
+    padding-bottom: 100px;
+  }
+}
 .title {
   color: #0d0033;
   font-style: normal;

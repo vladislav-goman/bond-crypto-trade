@@ -11,7 +11,7 @@ import telegram from '../../../images/black-telegram.svg';
 
 export const TeamSection: React.FC = () => {
   return (
-    <section id="team-section">
+    <section id="team-section" className={classes.team}>
       <Container>
         <div className={classes.header}>
           <h3 className={classes.title}>Наша команда</h3>
