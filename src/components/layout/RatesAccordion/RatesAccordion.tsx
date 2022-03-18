@@ -32,7 +32,7 @@ const StarMark: React.FC = () => {
 export const RatesAccordion: React.FC = () => {
   return (
     <article className={classes.ratesAccordion}>
-      <Accordion.Root className={classes.root} type="single" defaultValue="item-1">
+      <Accordion.Root className={classes.root} type="single" defaultValue="item-1" collapsible={true}>
         <Animation className={'animate__fadeInRight'}>
           <Accordion.Item className={classes.item} value="item-1">
             <Accordion.Header>
@@ -77,12 +77,18 @@ export const RatesAccordion: React.FC = () => {
               <Accordion.Trigger className={classes.trigger}>
                 <div className={classes.group}>
                   <h2 className={classes.acc__header}>Индивидуальное</h2>
-                  <StarMark />
+                  <div className={classes.notMobile}>
+                    <StarMark />
+                  </div>
                   <Badge className={classes.badge}>€2999</Badge>
                 </div>
                 <div className={classes.group}>
                   <Button isLink title="Запись" className={classes.button} type={ButtonType.secondary} />
                   <PlusSign />
+                </div>
+                <div className={cx(classes.group, classes.mobile)}>
+                  <h2 className={cx(classes.acc__header, classes.mobile)}>Индивидуальное</h2>
+                  <StarMark />
                 </div>
               </Accordion.Trigger>
             </Accordion.Header>

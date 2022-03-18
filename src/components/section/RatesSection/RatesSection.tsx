@@ -9,12 +9,12 @@ export const RatesSection: React.FC = () => {
     <section id="rates-section" className={classes.rates}>
       <Container className={classes.transition}>
         <Row>
-          <Col md={{ span: 4 }} className={classes.transition}>
+          <Col xl={{ span: 4 }} className={classes.transition}>
             <div className={classes.inner}>
               <RatesDescription />
             </div>
           </Col>
-          <Col md={{ span: 8 }}>
+          <Col xl={{ span: 8 }}>
             <div className={classes.inner}>
               <RatesAccordion />
             </div>

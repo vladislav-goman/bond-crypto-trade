@@ -11,7 +11,7 @@ import hands from '../../../images/hands-helping.svg';
 
 export const IDOSection: React.FC = () => {
   return (
-    <section id="ido-section">
+    <section id="ido-section" className={classes.ido}>
       <Container>
         <h3 className={classes.ido__title}>Отдельный курс IDO</h3>
         <Row>
@@ -23,9 +23,8 @@ export const IDOSection: React.FC = () => {
                   <span className={classes.ido__card__gradient}>IDO</span>
                 </p>
                 <p className={classes.ido__card__description}>
-                  Разработали и успешно проводим курс по инвестициям в проекты
-                  на ранней стадии развития, при поддержке экспертов в области
-                  IDO.
+                  Разработали и успешно проводим курс по инвестициям в проекты на ранней стадии развития, при поддержке
+                  экспертов в области IDO.
                 </p>
                 <div className={classes.buttonGroup}>
                   <Button title="Записаться" />
@@ -37,27 +36,17 @@ export const IDOSection: React.FC = () => {
           <Col md={{ offset: 5 }}>
             <Animation className={'animate__fadeInRight'}>
               <section className={classes.benefits}>
-                <div
-                  className={cx(classes.ido__card, classes.ido__card__small)}
-                >
+                <div className={cx(classes.ido__card, classes.ido__card__small)}>
                   <Image src={timer} alt="timer" />
                   <p className={classes.benefits__text}>2 недели обучения</p>
                 </div>
-                <div
-                  className={cx(classes.ido__card, classes.ido__card__small)}
-                >
+                <div className={cx(classes.ido__card, classes.ido__card__small)}>
                   <Image src={money} alt="money bill" />
-                  <p className={classes.benefits__text}>
-                    Полное погружение в IDO
-                  </p>
+                  <p className={classes.benefits__text}>Полное погружение в IDO</p>
                 </div>
-                <div
-                  className={cx(classes.ido__card, classes.ido__card__small)}
-                >
+                <div className={cx(classes.ido__card, classes.ido__card__small)}>
                   <Image src={hands} alt="hands" />
-                  <p className={classes.benefits__text}>
-                    Доступ к аллокациям от нашего фонда
-                  </p>
+                  <p className={classes.benefits__text}>Доступ к аллокациям от нашего фонда</p>
                 </div>
               </section>
             </Animation>

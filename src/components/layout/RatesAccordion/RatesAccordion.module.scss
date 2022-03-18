@@ -1,6 +1,9 @@
 @import '../../../styles/share/variables';
 
 .ratesAccordion {
+  @include use-tablet() {
+    margin-top: 1rem;
+  }
   h3 {
     margin: 0;
   }
@@ -10,16 +13,16 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 1.5rem;
+
+    @include use-tablet() {
+      gap: 1rem;
+    }
   }
 
   .item {
     padding: 24px 32px 32px;
     background-color: $white;
     border-radius: 24px;
-
-    @include use-mobile() {
-      margin-top: 16px;
-    }
   }
 
   .plus {
@@ -86,6 +89,16 @@
       height: 48px;
       background: linear-gradient(93.49deg, #6811be 0%, #8c3fd9 100%);
       margin-left: 12px;
+
+      @include use-mobile() {
+        width: 32px;
+        height: 32px;
+
+        svg {
+          width: 21px;
+          height: 21px;
+        }
+      }
     }
   }
 
@@ -116,6 +129,15 @@
   .group {
     display: flex;
     align-items: center;
+
+    &.mobile {
+      flex: 2;
+      justify-content: space-between;
+      display: none;
+      @include use-mobile() {
+        display: flex;
+      }
+    }
   }
 
   .trigger {
@@ -127,6 +149,11 @@
     width: 100%;
     cursor: pointer;
     padding: 0;
+
+    @include use-mobile() {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
     &[data-state='closed'] {
     }
@@ -142,6 +169,12 @@
     }
   }
 
+  .notMobile {
+    @include use-mobile() {
+      display: none;
+    }
+  }
+
   .acc__header {
     color: #0d0033;
     font-weight: 500;
@@ -149,14 +182,33 @@
     margin: 0;
     transition: $mid-transition;
 
+    @include use-tablet() {
+      font-size: 31px;
+      line-height: 40px;
+    }
+
     @include use-mobile() {
       display: none;
+    }
+
+    &.mobile {
+      @include use-mobile() {
+        display: block;
+      }
     }
   }
 
   .container {
     padding: 0;
     min-height: 410px;
+
+    @media screen and (max-width: 1399.5px) {
+      min-height: 442px;
+    }
+
+    @include use-tablet() {
+      min-height: unset;
+    }
   }
 
   .title {

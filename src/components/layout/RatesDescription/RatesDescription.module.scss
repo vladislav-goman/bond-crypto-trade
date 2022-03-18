@@ -12,9 +12,34 @@
   overflow: hidden;
   background: url('../../../images/rates-description-bg.png') no-repeat bottom;
 
+  @include use-tablet() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-size: cover;
+  }
+
+  @include use-mobile() {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    @include use-tablet() {
+      margin-bottom: 132px;
+    }
+    @include use-mobile() {
+      margin-bottom: 0;
+    }
+  }
+
   .imageContainer {
     position: relative;
     left: 32px;
+    @include use-tablet() {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
   }
 
   &::before {
@@ -49,7 +74,7 @@
     font-family: $header-font-family;
     padding: 0;
 
-    @include use-mobile() {
+    @include use-tablet() {
       margin-bottom: 2rem;
       font-size: 14px;
     }

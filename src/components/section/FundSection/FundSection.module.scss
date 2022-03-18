@@ -13,6 +13,10 @@
   font-size: 16px;
   margin-top: -130px;
 
+  p {
+    margin-bottom: 0;
+  }
+
   @include use-mobile() {
     margin: -130px 12px 0 12px;
     padding: 24px 8px;
@@ -21,6 +25,10 @@
   .information {
     &__title {
       text-align: left;
+    }
+
+    &__description {
+      margin-bottom: 1rem;
     }
   }
 

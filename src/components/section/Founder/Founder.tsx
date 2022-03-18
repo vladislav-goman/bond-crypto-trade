@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Founder.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y } from 'swiper';
+import { A11y, Autoplay } from 'swiper';
 import Image from 'next/image';
 import { Telegram, Youtube, Instagram } from '../../icons';
 import WithCar from '../../../images/founder/with-car.png';
@@ -13,7 +13,7 @@ import BMV from '../../../images/founder/bmw.png';
 
 export const Founder: React.FC = () => {
   return (
-    <section id="founder-section" className={classes.team}>
+    <section id="founder-section-id" className={classes.founder}>
       <Container>
         <Row>
           <Col md={12}>
@@ -37,7 +37,12 @@ export const Founder: React.FC = () => {
                   </Col>
                   <Col md={12}>
                     <Swiper
-                      modules={[A11y]}
+                      modules={[A11y, Autoplay]}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                        pauseOnMouseEnter: true,
+                      }}
                       spaceBetween={0}
                       slidesPerView={'auto'}
                       className={classes.container}
@@ -48,6 +53,7 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
+                              placeholder="blur"
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"
@@ -65,6 +71,7 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
+                              placeholder="blur"
                               src={WithGlass}
                               alt="Игнат с бокалом вина"
                               layout="responsive"
@@ -83,6 +90,7 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
+                              placeholder="blur"
                               src={Jacket}
                               alt="Игнат на фоне домов"
                               layout="responsive"
@@ -100,6 +108,7 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
+                              placeholder="blur"
                               src={Jacht}
                               alt="Игнат на частной лодке"
                               layout="responsive"
@@ -116,7 +125,13 @@ export const Founder: React.FC = () => {
                       <SwiperSlide className={classes.slide}>
                         <article className={classes.card}>
                           <div className={classes.image__container}>
-                            <Image className={classes.image} src={BMV} alt="Игнат на фоне машины" layout="responsive" />
+                            <Image
+                              className={classes.image}
+                              placeholder="blur"
+                              src={BMV}
+                              alt="Игнат на фоне машины"
+                              layout="responsive"
+                            />
                           </div>
                           <h4 className={classes.header}>2021-2022 год </h4>
                           <p className={classes.description}>
@@ -132,6 +147,7 @@ export const Founder: React.FC = () => {
                           <div className={classes.image__container}>
                             <Image
                               className={classes.image}
+                              placeholder="blur"
                               src={WithCar}
                               alt="Игнат на фоне машины"
                               layout="responsive"

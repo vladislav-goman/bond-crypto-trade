@@ -90,19 +90,73 @@
     width: 156px;
     height: 156px;
 
+    @include use-tablet() {
+      width: 200px;
+      height: 200px;
+    }
+
     &.left {
       top: 25%;
       left: 20px;
+
+      @media screen and (max-width: 1399.5px) {
+        left: -20px;
+      }
+
+      @media screen and (max-width: 991.5px) {
+        left: -50px;
+      }
+
+      @include use-mobile() {
+        left: -35px;
+      }
     }
 
     &.right {
       top: 25%;
       left: 165px;
+
+      @media screen and (max-width: 1399.5px) {
+        left: 125px;
+        top: 50px;
+      }
+
+      @include use-tablet() {
+        left: 135px;
+      }
+
+      @media screen and (max-width: 991.5px) {
+        left: 95px;
+      }
+
+      @include use-mobile() {
+        left: 35%;
+        top: 5px;
+      }
     }
 
     &.top {
       top: -42%;
       left: 90px;
+
+      @media screen and (max-width: 1399.5px) {
+        left: 55px;
+        top: -70px;
+      }
+
+      @include use-tablet() {
+        left: 185px;
+        top: -145px;
+      }
+
+      @media screen and (max-width: 991.5px) {
+        left: 130px;
+        top: -145px;
+      }
+
+      @include use-mobile() {
+        left: 60%;
+      }
     }
   }
 }
