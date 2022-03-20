@@ -1,7 +1,11 @@
 @import '../../../styles/share/variables';
 
 .team {
-  padding-bottom: 400px;
+  padding-bottom: 450px;
+
+  @include use-tablet() {
+    padding-bottom: 230px;
+  }
 
   @include use-mobile() {
     padding-bottom: 100px;

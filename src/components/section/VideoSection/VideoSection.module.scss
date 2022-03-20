@@ -5,9 +5,17 @@
   text-align: center;
   width: 100%;
   top: -450px;
+  left: 0;
+  right: 0;
 
   @include use-mobile() {
     top: -300px;
+  }
+
+  @include use-tablet() {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
   }
 }
 
@@ -17,6 +25,10 @@
   font-weight: 500;
   font-size: 68px;
   margin-bottom: 16px;
+
+  @include use-mobile() {
+    font-size: 39px;
+  }
 }
 
 .videoWrapper {
@@ -30,10 +42,15 @@
 .video {
   border-radius: 24px;
   box-shadow: 0px 40px 100px rgba(26, 26, 26, 0.32);
-  width: 480px;
-  height: 600px;
+  width: 880px;
+  height: 496px;
 
   @include use-mobile() {
+    width: 100%;
+    height: 300px;
+  }
+
+  @include use-tablet() {
     width: 100%;
     height: 300px;
   }

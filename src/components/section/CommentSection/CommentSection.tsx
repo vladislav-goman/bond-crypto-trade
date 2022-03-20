@@ -47,11 +47,9 @@ export const CommentSection: React.FC = () => {
                     </div>
                   </div>
                   <p className={classes.description}>
-                    Cras imperdiet massa non quisque pharetra ornare augue. Velit sed facilisi elementum, mus
-                    pellentesque enim sapien, eget netus. In quisque fames mattis tempus. Maecenas pellentesque cras sem
-                    tortor ut volutpat. Placerat varius tincidunt dui suscipit. Sed habitasse mauris mauris ornare
-                    accumsan, ac id massa non. Adipiscing diam consequat, diam amet porttitor nunc ultrices morbi
-                    tristique. Semper eget sollicitudin sit eget sollicitudin non donec feugiat.
+                    Я пришел новичком в крипте. К концу второго потока собрал портфель на споте и отбил стоимость
+                    обучения, сделав к депозиту +40%(на растущем рынке) Большим плюсом это сообщество, которое остаётся
+                    с вами навсегда. Как итог: однозначно стоит своих денег.
                   </p>
                   <p className={classes.date}>12 января • 17:00</p>
                 </article>
@@ -68,9 +66,9 @@ export const CommentSection: React.FC = () => {
                     </div>
                   </div>
                   <p className={classes.description}>
-                    Eget tortor molestie erat porttitor sagittis in nec. Mi dictum dolor egestas habitasse ac. At sit
-                    lorem sit nullam nascetur. Condimentum elementum arcu phasellus sit amet amet. Tellus turpis
-                    ridiculus at pellentesque iaculis ultricies. Nunc orci nibh accumsan felis sed interdum. Mauris.
+                    Большое спасибо за обучение! Очень познавательно и интересно. Получил много новых знаний и хорошую
+                    базу для дальнейшего развития, а самое главное - доступ к большому комьюнити с отзывчивыми ребятами,
+                    которые всегда поделятся информацией и новыми знаниями.
                   </p>
                   <p className={classes.date}>12 января • 17:00</p>
                 </article>
@@ -87,9 +85,10 @@ export const CommentSection: React.FC = () => {
                     </div>
                   </div>
                   <p className={classes.description}>
-                    Arcu sit molestie libero suspendisse viverra elit. Lectus libero gravida purus dolor, ornare eu
-                    auctor. Et ut massa pulvinar nulla leo tellus eget sed eget. Est a in mauris mi, malesuada sociis
-                    ipsum etiam. Natoque enim, diam eget odio.
+                    Я очень доволен, что обучался у тебя, так как получил очень много полезной информации, которую
+                    использую в своей торговле. Подача материала простая и понятная, на все вопросы ты отвечаешь, так
+                    что если что-то не понял - можно переспросить. Комьюнити здесь очень дружелюбное и с радостью
+                    ответит на любой вопрос)
                   </p>
                   <p className={classes.date}>12 января • 17:00</p>
                 </article>
@@ -106,11 +105,10 @@ export const CommentSection: React.FC = () => {
                     </div>
                   </div>
                   <p className={classes.description}>
-                    Cras imperdiet massa non quisque pharetra ornare augue. Velit sed facilisi elementum, mus
-                    pellentesque enim sapien, eget netus. In quisque fames mattis tempus. Maecenas pellentesque cras sem
-                    tortor ut volutpat. Placerat varius tincidunt dui suscipit. Sed habitasse mauris mauris ornare
-                    accumsan, ac id massa non. Adipiscing diam consequat, diam amet porttitor nunc ultrices morbi
-                    tristique. Semper eget sollicitudin sit eget sollicitudin non donec feugiat.
+                    Я начала изучать трейдинг, просмотрела множество лекций, прочитала кучу книг и статей, проходила
+                    другие обучения, и с уверенность могу сказать, что твоё обучение действительно уникальное. Очень
+                    много материала, который так просто не найдёшь в интернете и книгах. Ты действительно все очень
+                    круто объясняешь.
                   </p>
                   <p className={classes.date}>12 января • 17:00</p>
                 </article>

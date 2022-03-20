@@ -14,9 +14,9 @@ export const VideoSection: React.FC = () => {
                 className={classes.video}
                 src="https://www.youtube.com/embed/V-wYnvtAxMA"
                 title="БЕСПЛАТНЫЙ ВЕБИНАР 30.09.2021| СИТУАЦИЯ НА РЫНКЕ| ОТВЕТЫ НА ВОПРОСЫ"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </Col>

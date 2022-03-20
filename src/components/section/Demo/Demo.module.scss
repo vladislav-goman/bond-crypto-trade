@@ -5,8 +5,14 @@
   padding-top: 268px;
   margin-bottom: 80px;
 
+  @include use-tablet() {
+    margin-top: 50px;
+    padding-top: 240px;
+  }
+
   @include use-mobile() {
     margin-top: 116px;
+    padding-top: 270px;
   }
 
   .header {

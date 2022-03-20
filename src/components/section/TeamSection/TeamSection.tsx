@@ -2,11 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import classes from './TeamSection.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-import ignat from '../../../images/founder/bmw.png';
-import rotaru from '../../../images/founder/bmw.png';
-import concern from '../../../images/founder/bmw.png';
-import philin from '../../../images/founder/bmw.png';
-import bodya from '../../../images/founder/bmw.png';
+import ignat from '../../../images/team/ignat.png';
+import rotaru from '../../../images/team/rotaru.png';
+import bodya from '../../../images/team/bodya.png';
 import telegram from '../../../images/black-telegram.svg';
 
 export const TeamSection: React.FC = () => {
@@ -25,7 +23,7 @@ export const TeamSection: React.FC = () => {
             <div className={classes.cardContainer}>
               <div className={classes.card}>
                 <Image src={ignat} alt="Игнат Бонд" className={classes.memberImage} />
-                <a href="#" className={classes.telegramContainer}>
+                <a href="https://t.me/Ignatbond" className={classes.telegramContainer} target="_blank" rel="noreferrer">
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
                 <p className={classes.fullName}>Игнат Бонд</p>
@@ -33,35 +31,24 @@ export const TeamSection: React.FC = () => {
               </div>
               <div className={classes.card}>
                 <Image src={rotaru} alt="Маким Ротару" className={classes.memberImage} />
-                <a href="#" className={classes.telegramContainer}>
+                <a href="https://t.me/maxdsl" className={classes.telegramContainer} target="_blank" rel="noreferrer">
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
                 <p className={classes.fullName}>Маким Ротару</p>
                 <p className={classes.position}>Сооснователь и копирайтер на пол ставки</p>
               </div>
               <div className={classes.card}>
-                <Image src={concern} alt="Concern" className={classes.memberImage} />
-                <a href="#" className={classes.telegramContainer}>
-                  <Image src={telegram} alt="telegram" className={classes.telegram} />
-                </a>
-                <p className={classes.fullName}>Concern</p>
-                <p className={classes.position}>Штрих 1</p>
-              </div>
-              <div className={classes.card}>
-                <Image src={philin} alt="Philin" className={classes.memberImage} />
-                <a href="#" className={classes.telegramContainer}>
-                  <Image src={telegram} alt="telegram" className={classes.telegram} />
-                </a>
-                <p className={classes.fullName}>Philin</p>
-                <p className={classes.position}>Штрих 2</p>
-              </div>
-              <div className={classes.card}>
                 <Image src={bodya} alt="Bodya Invate" className={classes.memberImage} />
-                <a href="#" className={classes.telegramContainer}>
+                <a
+                  href="https://t.me/bodyainvade"
+                  className={classes.telegramContainer}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
                 <p className={classes.fullName}>Bodya Invate</p>
-                <p className={classes.position}>Штрих 3</p>
+                <p className={classes.position}>IDO Master</p>
               </div>
             </div>
           </Col>
