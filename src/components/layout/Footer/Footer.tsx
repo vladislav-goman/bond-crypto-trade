@@ -6,7 +6,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import classes from './Footer.module.scss';
 import { Telegram, Youtube, Instagram } from '../../icons';
 
-export const Footer: React.FC<{ dark?: boolean }> = ({ dark = false }) => {
+export const Footer: React.FC<{ dark?: boolean; navData: { href: string; title: string }[] }> = ({
+  dark = false,
+  navData = [],
+}) => {
   return (
     <footer className={cx(classes.footer, { [classes.dark]: dark })} id="footer">
       <Container>
@@ -18,24 +21,17 @@ export const Footer: React.FC<{ dark?: boolean }> = ({ dark = false }) => {
                   <a className={classes.logo}>BondCryptoTrade</a>
                 </Link>
                 <div className={classes.link}>
-                  <AnchorLink offset="AnchorLink50" href="#founder-section-id" className={classes.link__item}>
-                    Основатель
-                  </AnchorLink>
-                  <AnchorLink offset="50" href="#rates-section" className={classes.link__item}>
-                    Тарифы
-                  </AnchorLink>
-                  <AnchorLink offset="50" href="#community-section" className={classes.link__item}>
-                    Комьюнити
-                  </AnchorLink>
-                  <AnchorLink offset="50" href="#comment-section" className={classes.link__item}>
-                    Отзывы
-                  </AnchorLink>
-                  <AnchorLink offset="50" href="#team-section" className={classes.link__item}>
-                    Команда
-                  </AnchorLink>
-                  <AnchorLink offset="50" href="#demo" className={classes.link__item}>
-                    Демо
-                  </AnchorLink>
+                  {navData.map(({ href, title }) =>
+                    href !== '/' ? (
+                      <AnchorLink key={title} offset="57.6" href={`#${href}`} className={classes.link__item}>
+                        {title}
+                      </AnchorLink>
+                    ) : (
+                      <Link href={href}>
+                        <a className={classes.link__item}>{title}</a>
+                      </Link>
+                    )
+                  )}
                 </div>
                 <div className={classes.social}>
                   <a className={classes.social__icon} href="https://telegram.com" target="_blank" rel="noreferrer">

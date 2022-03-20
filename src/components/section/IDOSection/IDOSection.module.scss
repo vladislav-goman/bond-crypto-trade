@@ -10,6 +10,10 @@
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
+
+    @include use-tablet() {
+      font-size: 64px;
+    }
   }
 
   &__card {
@@ -58,6 +62,7 @@
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__text {
@@ -74,14 +79,12 @@
     @include use-mobile() {
       flex: 1;
       margin-left: 0;
-      margin-right: 4px;
     }
   }
 
   & :nth-child(2) {
     @include use-mobile() {
       flex: 1;
-      margin-left: 4px;
     }
   }
   & :nth-child(3) {
@@ -90,15 +93,15 @@
     @include use-mobile() {
       flex: 1 100%;
       margin-left: 0;
-      margin-top: 8px;
     }
   }
 }
 
 .buttonGroup {
   display: flex;
+  gap: 10px;
 
-  & button:first-child {
-    margin-right: 10px;
+  @include use-mobile() {
+    justify-content: space-between;
   }
 }

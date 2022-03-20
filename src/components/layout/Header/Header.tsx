@@ -6,7 +6,7 @@ import classes from './Header.module.scss';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
 import { Button } from '../../common/Button';
 
-export const Header: React.FC = () => {
+export const Header: React.FC<{ navData: { href: string; title: string }[] }> = ({ navData = [] }) => {
   const [isActive, setIsActive] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const bodyRef = useRef<HTMLElement>();
@@ -52,24 +52,17 @@ export const Header: React.FC = () => {
               </Link>
 
               <nav className={classes.nav}>
-                <AnchorLink offset="50" href="#founder-section-id" className={classes.link}>
-                  Основатель
-                </AnchorLink>
-                <AnchorLink offset="50" href="#rates-section" className={classes.link}>
-                  Тарифы
-                </AnchorLink>
-                <AnchorLink offset="50" href="#community-section" className={classes.link}>
-                  Комьюнити
-                </AnchorLink>
-                <AnchorLink offset="50" href="#comment-section" className={classes.link}>
-                  Отзывы
-                </AnchorLink>
-                <AnchorLink offset="50" href="#team-section" className={classes.link}>
-                  Команда
-                </AnchorLink>
-                <AnchorLink offset="50" href="#demo" className={classes.link}>
-                  Демо
-                </AnchorLink>
+                {navData.map(({ href, title }) =>
+                  href !== '/' ? (
+                    <AnchorLink key={title} offset="57.6" href={`#${href}`} className={classes.link}>
+                      {title}
+                    </AnchorLink>
+                  ) : (
+                    <Link href={href}>
+                      <a className={classes.link}>{title}</a>
+                    </Link>
+                  )
+                )}
                 <Button title="Записаться" className={cx(classes.apply)} />
               </nav>
 
@@ -79,34 +72,23 @@ export const Header: React.FC = () => {
                 })}
               >
                 <div className={classes.mobileNav}>
-                  <AnchorLink
-                    offset="30"
-                    href="#founder-section-id"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    Основатель
-                  </AnchorLink>
-                  <AnchorLink offset="30" href="#rates-section" className={classes.link} onClick={onLinkClickHandler}>
-                    Тарифы
-                  </AnchorLink>
-                  <AnchorLink
-                    offset="30"
-                    href="#community-section"
-                    className={classes.link}
-                    onClick={onLinkClickHandler}
-                  >
-                    Комьюнити
-                  </AnchorLink>
-                  <AnchorLink offset="30" href="#comment-section" className={classes.link} onClick={onLinkClickHandler}>
-                    Отзывы
-                  </AnchorLink>
-                  <AnchorLink offset="30" href="#team-section" className={classes.link} onClick={onLinkClickHandler}>
-                    Команда
-                  </AnchorLink>
-                  <AnchorLink offset="30" href="#demo" className={classes.link} onClick={onLinkClickHandler}>
-                    Демо
-                  </AnchorLink>
+                  {navData.map(({ href, title }) =>
+                    href !== '/' ? (
+                      <AnchorLink
+                        key={title}
+                        offset="49.6"
+                        href={`#${href}`}
+                        className={classes.link}
+                        onClick={onLinkClickHandler}
+                      >
+                        {title}
+                      </AnchorLink>
+                    ) : (
+                      <Link href={href}>
+                        <a className={classes.link}>{title}</a>
+                      </Link>
+                    )
+                  )}
                   <Button title="Записаться" className={cx(classes.apply, 'mobile-only')} />
                 </div>
               </nav>

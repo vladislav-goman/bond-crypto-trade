@@ -22,10 +22,12 @@ export const IDOWelcome: React.FC = () => {
                 </header>
                 <main className={classes.main}>
                   <Animation className={'animate__fadeInLeft'}>
-                    <Button className={classes.primaryButton} title="Регистрация" />
+                    <Link href="#ido-audience-section" passHref>
+                      <Button isLink className={classes.primaryButton} title="Coming soon" />
+                    </Link>
                   </Animation>
                   <Animation className={'animate__fadeInRight'}>
-                    <Link href="/ido" passHref>
+                    <Link href="#ido-audience-section" passHref>
                       <Button
                         className={classes.secondaryButton}
                         isLink
@@ -45,7 +47,7 @@ export const IDOWelcome: React.FC = () => {
                               <Calendar />
                               <h4 className={classes.label}>Старт</h4>
                             </header>
-                            <h3 className={classes.info}>26 января</h3>
+                            <h3 className={classes.info}>Q1 2022</h3>
                           </article>
                           <article className={classes.card}>
                             <header className={classes.top}>

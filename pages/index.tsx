@@ -12,10 +12,12 @@ import { IDOSection } from '../src/components/section/IDOSection';
 import { CommentSection } from '../src/components/section/CommentSection';
 import { TeamSection } from '../src/components/section/TeamSection';
 
+import { indexNavData } from '../src/constants/navigation';
+
 const Home: NextPage = () => {
   return (
     <div className="app-wrapper">
-      <Header />
+      <Header navData={indexNavData} />
       <main>
         <Welcome />
         <StatsSection />
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
         <CommentSection />
         <TeamSection />
       </main>
-      <FooterWithDemo />
+      <FooterWithDemo navData={indexNavData} />
     </div>
   );
 };

@@ -56,7 +56,7 @@ export const IDOProgram: React.FC = () => {
                 <h2 className={classes.label}>Программа курса IDO</h2>
                 <p className={classes.date}>
                   <Calendar />
-                  26 января – 8 февраля
+                  Q1 2022
                 </p>
               </Animation>
             </div>
@@ -65,7 +65,7 @@ export const IDOProgram: React.FC = () => {
             <div className={classes.inner}>
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 1</h3>
                   <ol className={classes.description}>
                     <li>Что такое блокчейн?</li>
@@ -78,7 +78,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 2</h3>
                   <ol className={classes.description}>
                     <li>План анализа проектов</li>
@@ -92,7 +92,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 3</h3>
                   <ol className={classes.description}>
                     <li>Инструменты для анализа</li>
@@ -103,7 +103,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 4</h3>
                   <ol className={classes.description}>
                     <li>Стадии проектов</li>
@@ -115,7 +115,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 5</h3>
                   <ol className={classes.description}>
                     <li>Основные инструменты работы</li>
@@ -127,7 +127,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 6</h3>
                   <ol className={classes.description}>
                     <li>Стейкинг как пассивный способ заработка</li>
@@ -140,7 +140,7 @@ export const IDOProgram: React.FC = () => {
 
               <Animation className={'animate__fadeInRight'}>
                 <article className={classes.card}>
-                  <Badge>26 января</Badge>
+                  <Badge>Coming soon</Badge>
                   <h3 className={classes.header}>Лекция 7 и заключение</h3>
                   <ol className={classes.description}>
                     <li>Как успеть за трендом</li>

@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Welcome.module.scss';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Row, Col } from 'react-bootstrap';
 import cx from 'classnames';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button, ButtonType } from '../../common/Button';
 import { BackgroundChart } from '../../common/BackgroundChart';
 import MonacoIcon from '../../../images/monaco.svg';
@@ -40,9 +40,9 @@ export const Welcome: React.FC = () => {
                   <Button title="Регистрация" />
                 </Animation>
                 <Animation className={'animate__fadeInRight'}>
-                  <Link href="/ido" passHref>
+                  <AnchorLink href="#cards-section" offset="60" className={classes.link}>
                     <Button isLink title="Подробнее" type={ButtonType.secondary} />
-                  </Link>
+                  </AnchorLink>
                 </Animation>
               </div>
             </div>

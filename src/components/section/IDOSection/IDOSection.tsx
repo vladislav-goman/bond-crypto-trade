@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
 import classes from './IDOSection.module.scss';
+import Link from 'next/link';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Button, ButtonType } from '../../common/Button';
 import { Animation } from '../../common/Animation';
@@ -15,7 +16,7 @@ export const IDOSection: React.FC = () => {
       <Container>
         <h3 className={classes.ido__title}>Отдельный курс IDO</h3>
         <Row>
-          <Col lg={{ span: 4, offset: 2 }} sm={{ span: 6, offset: 0 }}>
+          <Col lg={{ span: 4, offset: 2 }} md={{ span: 6, offset: 0 }}>
             <Animation className={'animate__fadeInLeft'}>
               <div className={classes.ido__card}>
                 <p className={classes.ido__card__title}>
@@ -27,8 +28,12 @@ export const IDOSection: React.FC = () => {
                   экспертов в области IDO.
                 </p>
                 <div className={classes.buttonGroup}>
-                  <Button title="Записаться" />
-                  <Button title="Подробнее" type={ButtonType.secondary} />
+                  <Link href="/ido" passHref>
+                    <Button isLink title="Записаться" />
+                  </Link>
+                  <Link href="/ido" passHref>
+                    <Button isLink title="Подробнее" type={ButtonType.secondary} />
+                  </Link>
                 </div>
               </div>
             </Animation>

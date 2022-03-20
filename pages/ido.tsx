@@ -5,16 +5,18 @@ import { IDOWelcome } from '../src/components/section/IDOWelcome';
 import { IDOProgram } from '../src/components/section/IDOProgram';
 import { Audience } from '../src/components/section/Audience';
 
+import { IDONavData } from '../src/constants/navigation';
+
 const Home: NextPage = () => {
   return (
     <>
-      <Header />
+      <Header navData={IDONavData} />
       <main>
         <IDOWelcome />
         <Audience />
         <IDOProgram />
       </main>
-      <Footer />
+      <Footer navData={IDONavData} />
     </>
   );
 };

@@ -30,11 +30,11 @@ export const TeamSection: React.FC = () => {
                 <p className={classes.position}>Основатель</p>
               </div>
               <div className={classes.card}>
-                <Image src={rotaru} alt="Маким Ротару" className={classes.memberImage} />
+                <Image src={rotaru} alt="Макcим Ротару" className={classes.memberImage} />
                 <a href="https://t.me/maxdsl" className={classes.telegramContainer} target="_blank" rel="noreferrer">
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
-                <p className={classes.fullName}>Маким Ротару</p>
+                <p className={classes.fullName}>Макcим Ротару</p>
                 <p className={classes.position}>Сооснователь и копирайтер на пол ставки</p>
               </div>
               <div className={classes.card}>
