@@ -41,7 +41,7 @@ export const Welcome: React.FC = () => {
                 </Animation>
                 <Animation className={'animate__fadeInRight'}>
                   <AnchorLink href="#cards-section" offset="60" className={classes.link}>
-                    <Button isLink title="Подробнее" type={ButtonType.secondary} />
+                    <Button title="Подробнее" type={ButtonType.secondary} />
                   </AnchorLink>
                 </Animation>
               </div>

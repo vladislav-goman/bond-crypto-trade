@@ -108,7 +108,7 @@
       }
 
       @include use-mobile() {
-        left: -35px;
+        left: -65px;
       }
     }
 
@@ -130,7 +130,7 @@
       }
 
       @include use-mobile() {
-        left: 35%;
+        left: 25%;
         top: 5px;
       }
     }
@@ -155,7 +155,7 @@
       }
 
       @include use-mobile() {
-        left: 60%;
+        left: 45%;
       }
     }
   }
