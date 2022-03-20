@@ -22,17 +22,25 @@ export const CommentSection: React.FC = () => {
               slidesPerView={'auto'}
               className={classes.container}
               breakpoints={{ 0: { slidesPerView: 1.15 }, 768: { slidesPerView: 1.5 }, 1200: { slidesPerView: 3 } }}
+              // @ts-ignore https://github.com/nolimits4web/swiper/issues/3855
               ref={swiperRef}
               grabCursor
             >
               <div
                 id="previousButton"
                 className={classes.previousButton}
+                // @ts-ignore
                 onClick={() => swiperRef.current.swiper.slidePrev()}
               >
                 <Image src={leftArrow} alt="" />
               </div>
-              <div id="nextButton" className={classes.nextButton} onClick={() => swiperRef.current.swiper.slideNext()}>
+
+              <div
+                id="nextButton"
+                className={classes.nextButton}
+                // @ts-ignore
+                onClick={() => swiperRef.current.swiper.slideNext()}
+              >
                 <Image src={rightArrow} alt="" />
               </div>
               <SwiperSlide className={classes.slide}>
