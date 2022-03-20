@@ -28,7 +28,7 @@ export const IDOSection: React.FC = () => {
                   экспертов в области IDO.
                 </p>
                 <div className={classes.buttonGroup}>
-                  <Link href="/ido" passHref>
+                  <Link scroll href="/ido" passHref>
                     <Button isLink title="Записаться" />
                   </Link>
                   <Link href="/ido" passHref>
