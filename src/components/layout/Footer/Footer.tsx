@@ -27,7 +27,7 @@ export const Footer: React.FC<{ dark?: boolean; navData: { href: string; title: 
                         {title}
                       </AnchorLink>
                     ) : (
-                      <Link href={href}>
+                      <Link key={title} href={href}>
                         <a className={classes.link__item}>{title}</a>
                       </Link>
                     )

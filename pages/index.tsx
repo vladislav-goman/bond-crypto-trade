@@ -17,7 +17,7 @@ import { indexNavData } from '../src/constants/navigation';
 
 const Home: NextPage = () => {
   return (
-    <div className="app-wrapper">
+    <>
       <Head>
         <title>Обучение Трейдингу Криптовалют | Академия Трейдинга - Bond Crypto Trade</title>
 
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <TeamSection />
       </main>
       <FooterWithDemo navData={indexNavData} />
-    </div>
+    </>
   );
 };
 

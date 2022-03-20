@@ -11,7 +11,6 @@ import { IDONavData } from '../src/constants/navigation';
 const Home: NextPage = () => {
   return (
     <>
-      <Header navData={IDONavData} />
       <Head>
         <title>Онлайн-курс об IDO и инвестициях в выгодные проекты | Bond Crypto Trade</title>
 
@@ -25,6 +24,7 @@ const Home: NextPage = () => {
           content="Онлайн-курс об IDO и инвестициях в проекты на ранних стадиях развития. В курс входят 7 лекций которые научат вас правильно анализировать перспективные проекты и успешно инвестировать в них. Онлайн-поддержка 24/7 до и после курса, а также доступ в большое комьюнити, в котором вы найдете много полезной и актуальной информации."
         />
       </Head>
+      <Header navData={IDONavData} />
       <main>
         <IDOWelcome />
         <Audience />

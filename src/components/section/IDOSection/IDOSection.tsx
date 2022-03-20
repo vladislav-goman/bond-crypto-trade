@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
 import classes from './IDOSection.module.scss';
-import Link from 'next/link';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Button, ButtonType } from '../../common/Button';
 import { Animation } from '../../common/Animation';
@@ -28,12 +28,12 @@ export const IDOSection: React.FC = () => {
                   экспертов в области IDO.
                 </p>
                 <div className={classes.buttonGroup}>
-                  <Link scroll href="/ido" passHref>
-                    <Button isLink title="Записаться" />
-                  </Link>
-                  <Link href="/ido" passHref>
-                    <Button isLink title="Подробнее" type={ButtonType.secondary} />
-                  </Link>
+                  <a href="/ido" className={classes.link}>
+                    <Button title="Записаться" />
+                  </a>
+                  <a href="/ido" className={classes.link}>
+                    <Button title="Подробнее" type={ButtonType.secondary} />
+                  </a>
                 </div>
               </div>
             </Animation>

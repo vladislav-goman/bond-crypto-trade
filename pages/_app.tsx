@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#b392ac" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </Head>
-      <Component {...pageProps} />
+      <div className="app-wrapper">
+        <Component {...pageProps} />
+      </div>
     </div>
   );
 }
