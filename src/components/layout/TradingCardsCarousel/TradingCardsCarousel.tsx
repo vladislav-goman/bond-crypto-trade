@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pagination, A11y, EffectCards } from 'swiper';
+import { Pagination, A11y, EffectCards, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,8 +15,13 @@ export const TradingCardsCarousel: React.FC = () => {
   return (
     <Swiper
       effect={'cards'}
-      modules={[Pagination, A11y, EffectCards]}
+      modules={[Pagination, A11y, EffectCards, Autoplay]}
       spaceBetween={50}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+      }}
       slidesPerView={1}
       pagination={{
         clickable: true,

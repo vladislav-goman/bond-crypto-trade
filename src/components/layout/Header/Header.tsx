@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
               </Link>
 
               <nav className={classes.nav}>
-                <AnchorLink offset="50" href="#founder-section" className={classes.link}>
+                <AnchorLink offset="50" href="#founder-section-id" className={classes.link}>
                   Основатель
                 </AnchorLink>
                 <AnchorLink offset="50" href="#rates-section" className={classes.link}>
@@ -79,7 +79,12 @@ export const Header: React.FC = () => {
                 })}
               >
                 <div className={classes.mobileNav}>
-                  <AnchorLink offset="30" href="#founder-section" className={classes.link} onClick={onLinkClickHandler}>
+                  <AnchorLink
+                    offset="30"
+                    href="#founder-section-id"
+                    className={classes.link}
+                    onClick={onLinkClickHandler}
+                  >
                     Основатель
                   </AnchorLink>
                   <AnchorLink offset="30" href="#rates-section" className={classes.link} onClick={onLinkClickHandler}>

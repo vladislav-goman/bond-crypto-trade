@@ -12,7 +12,7 @@ export const CountUp: React.FC<{
 }> = ({ end, duration, separator = '', prefix = '', suffix = '', className = '' }) => {
   const countUpRef = React.useRef(null);
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 1,
     triggerOnce: true,
   });
   const { start } = useCountUp({

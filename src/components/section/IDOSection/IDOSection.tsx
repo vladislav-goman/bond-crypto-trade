@@ -11,7 +11,7 @@ import hands from '../../../images/hands-helping.svg';
 
 export const IDOSection: React.FC = () => {
   return (
-    <section id="ido-section">
+    <section id="ido-section" className={classes.ido}>
       <Container>
         <h3 className={classes.ido__title}>Отдельный курс IDO</h3>
         <Row>

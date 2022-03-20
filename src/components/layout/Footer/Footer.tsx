@@ -18,7 +18,7 @@ export const Footer: React.FC<{ dark?: boolean }> = ({ dark = false }) => {
                   <a className={classes.logo}>BondCryptoTrade</a>
                 </Link>
                 <div className={classes.link}>
-                  <AnchorLink offset="AnchorLink50" href="#founder-section" className={classes.link__item}>
+                  <AnchorLink offset="AnchorLink50" href="#founder-section-id" className={classes.link__item}>
                     Основатель
                   </AnchorLink>
                   <AnchorLink offset="50" href="#rates-section" className={classes.link__item}>

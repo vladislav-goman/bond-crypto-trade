@@ -32,6 +32,7 @@
     width: 432px;
     padding: 0 26px;
     margin: auto;
+    text-align: center;
 
     @include use-mobile() {
       padding: 16px;
@@ -41,7 +42,6 @@
     &:last-of-type {
       margin-top: 12px;
       padding: 0;
-      text-align: center;
 
       @include use-mobile() {
         padding: 16px;
@@ -54,7 +54,6 @@
   }
 
   .benefit {
-    padding: 24px;
     margin: 0 auto;
 
     &__section {
@@ -79,12 +78,22 @@
     &__container {
       background: #150542;
       text-align: center;
+      padding: 24px;
+      p {
+        margin-bottom: 0;
+      }
+
+      @include use-mobile() {
+        width: 100%;
+      }
     }
 
     &__title {
       font-style: normal;
       font-weight: 500;
       font-size: 68px;
+      text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+      font-family: $header-font-family;
     }
   }
 
@@ -113,6 +122,9 @@
       width: 275px;
       text-align: center;
       padding: 12px;
+      p {
+        margin-bottom: 0;
+      }
 
       @include use-mobile() {
         width: calc(50% - 1px);

@@ -46,23 +46,37 @@ export const StatsSection: React.FC = () => {
                     </header>
                     <main className={classes.content}>
                       <div className={cx(classes.emoji, classes.top)}>
-                        <Image
-                          quality={100}
-                          className={classes.emoji}
-                          alt="Dude with stars eyes Emoji"
-                          src={StarEyesEmoji}
-                        />
+                        <Animation className={'animate__jackInTheBox'}>
+                          <Image
+                            quality={100}
+                            className={classes.emoji}
+                            alt="Dude with"
+                            layout="responsive"
+                            src={StarEyesEmoji}
+                          />
+                        </Animation>
                       </div>
                       <div className={cx(classes.emoji, classes.right)}>
-                        <Image quality={100} className={classes.emoji} alt="Party Girl Emoji" src={PartyGirlEmoji} />
+                        <Animation className={'animate__jackInTheBox'} delay={1}>
+                          <Image
+                            quality={100}
+                            className={classes.emoji}
+                            layout="responsive"
+                            alt="Party Girl Emoji"
+                            src={PartyGirlEmoji}
+                          />
+                        </Animation>
                       </div>
                       <div className={cx(classes.emoji, classes.left)}>
-                        <Image
-                          quality={100}
-                          className={classes.emoji}
-                          alt="Beard Dude Girl Emoji"
-                          src={BeardDudeEmoji}
-                        />
+                        <Animation className={'animate__jackInTheBox'} delay={2}>
+                          <Image
+                            quality={100}
+                            className={classes.emoji}
+                            layout="responsive"
+                            alt="Girl Emoji"
+                            src={BeardDudeEmoji}
+                          />
+                        </Animation>
                       </div>
                     </main>
                   </article>
@@ -72,7 +86,7 @@ export const StatsSection: React.FC = () => {
                 <Animation className={'animate__fadeIn'}>
                   <article className={cx(classes.card, classes.horizontal)}>
                     <header className={classes.header}>
-                      <h2 className={classes.title}>
+                      <h2 className={classes.title} style={{ width: '203px' }}>
                         <CountUp duration={1.5} separator=" " end={4} /> года
                       </h2>
                       <p className={classes.description}>Управления активами</p>

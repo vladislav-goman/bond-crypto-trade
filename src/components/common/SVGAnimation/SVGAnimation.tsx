@@ -9,7 +9,7 @@ export const SVGAnimation: React.FC<{
   className?: string;
 }> = ({ animationData, className }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.8,
     triggerOnce: true,
   });
 

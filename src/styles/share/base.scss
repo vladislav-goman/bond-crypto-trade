@@ -28,6 +28,7 @@ body {
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
+  transition: $mid-transition;
 
   @include use-mobile() {
     .container {
@@ -37,6 +38,16 @@ body {
 
   &.menu-visible {
     overflow-y: hidden;
+  }
+
+  .desktop-only {
+    display: block;
+    @include use-tablet() {
+      display: none;
+    }
+    @include use-mobile() {
+      display: none;
+    }
   }
 
   .tablet-only {

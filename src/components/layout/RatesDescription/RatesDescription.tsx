@@ -9,7 +9,7 @@ export const RatesDescription: React.FC = () => {
   return (
     <Animation className={'animate__fadeInLeft'}>
       <article className={classes.ratesDescription}>
-        <div>
+        <div className={classes.text}>
           <h2 className={classes.title}>Тарифы</h2>
           <p className={classes.description}>
             Каждый разработанный нами тариф является уникальной системой получения знаний.
