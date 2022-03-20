@@ -1,0 +1,111 @@
+@import '../../../styles/share/variables';
+
+.team {
+  padding-bottom: 450px;
+
+  @include use-tablet() {
+    padding-bottom: 230px;
+  }
+
+  @include use-mobile() {
+    padding-bottom: 100px;
+  }
+}
+.title {
+  color: #0d0033;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 68px;
+  font-family: $header-font-family;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  color: #3c364d;
+  font-family: $header-font-family;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  width: 544px;
+  margin: 0 auto;
+
+  @include use-mobile() {
+    width: auto;
+  }
+}
+
+.cardContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 48px auto;
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+
+  @include use-mobile() {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.memberImage {
+  border-radius: 16px;
+  margin-bottom: 12px;
+
+  @include use-mobile() {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.telegramContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background-color: $white;
+  border-radius: 8px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+
+  @include use-mobile() {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.telegram {
+  @include use-mobile() {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fullName {
+  width: 100%;
+  font-family: $header-font-family;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: #0d0033;
+  margin-bottom: 4px;
+}
+
+.position {
+  color: #3c364d;
+  font-family: $header-font-family;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  width: 100%;
+}

@@ -96,6 +96,8 @@
 }
 
 .buttonGroup {
+  display: flex;
+
   & button:first-child {
     margin-right: 10px;
   }

@@ -15,7 +15,7 @@ export const IDOSection: React.FC = () => {
       <Container>
         <h3 className={classes.ido__title}>Отдельный курс IDO</h3>
         <Row>
-          <Col md={{ span: 4, offset: 2 }}>
+          <Col lg={{ span: 4, offset: 2 }} sm={{ span: 6, offset: 0 }}>
             <Animation className={'animate__fadeInLeft'}>
               <div className={classes.ido__card}>
                 <p className={classes.ido__card__title}>
