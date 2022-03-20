@@ -28,6 +28,10 @@
   text-align: center;
   width: 544px;
   margin: 0 auto;
+
+  @include use-mobile() {
+    width: auto;
+  }
 }
 
 .cardContainer {
