@@ -33,7 +33,14 @@ export const RatesDescription: React.FC = () => {
         </div>
         <div className={classes.mask}>
           <h4 className={classes.label}>Нужна помощь с выбором тарифа?</h4>
-          <Button className={classes.button} title="Напишите нам!" type={ButtonType.secondary} />
+          <Button
+            isLink
+            target="_blank"
+            href="https://t.me/bctmanager"
+            className={classes.button}
+            title="Напишите нам!"
+            type={ButtonType.secondary}
+          />
         </div>
       </article>
     </Animation>
