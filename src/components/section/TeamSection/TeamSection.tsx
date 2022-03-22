@@ -3,8 +3,8 @@ import Image from 'next/image';
 import classes from './TeamSection.module.scss';
 import { Container, Row, Col } from 'react-bootstrap';
 import ignat from '../../../images/team/ignat.png';
-import rotaru from '../../../images/team/rotaru.png';
-import bodya from '../../../images/team/bodya.jpg';
+import rotaru from '../../../images/team/rotaru.jpg';
+import bodya from '../../../images/team/bodya.png';
 import telegram from '../../../images/black-telegram.svg';
 
 export const TeamSection: React.FC = () => {
@@ -47,7 +47,7 @@ export const TeamSection: React.FC = () => {
                 >
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
-                <p className={classes.fullName}>Bodya Invate</p>
+                <p className={classes.fullName}>Bodya Invade</p>
                 <p className={classes.position}>IDO Master</p>
               </div>
             </div>
