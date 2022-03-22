@@ -34,13 +34,28 @@ export const Footer: React.FC<{ dark?: boolean; navData: { href: string; title: 
                   )}
                 </div>
                 <div className={classes.social}>
-                  <a className={classes.social__icon} href="https://telegram.com" target="_blank" rel="noreferrer">
+                  <a
+                    className={classes.social__icon}
+                    href="https://t.me/bondcryptotrade"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Telegram />
                   </a>
-                  <a className={classes.social__icon} href="https://youtube.com" target="_blank" rel="noreferrer">
+                  <a
+                    className={classes.social__icon}
+                    href="https://youtube.com/c/BondCryptoTrade"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Youtube />
                   </a>
-                  <a className={classes.social__icon} href="https://instagram.com" target="_blank" rel="noreferrer">
+                  <a
+                    className={classes.social__icon}
+                    href="https://instagram.com/ignatbond?utm_medium=bondcryptotrade.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <Instagram />
                   </a>
                 </div>

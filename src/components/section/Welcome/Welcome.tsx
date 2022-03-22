@@ -37,7 +37,9 @@ export const Welcome: React.FC = () => {
               </Animation>
               <div className={classes.buttonGroup}>
                 <Animation className={'animate__fadeInLeft'}>
-                  <Button title="Регистрация" />
+                  <AnchorLink href="#rates-section" offset="60" className={classes.link}>
+                    <Button title="Регистрация" />
+                  </AnchorLink>
                 </Animation>
                 <Animation className={'animate__fadeInRight'}>
                   <AnchorLink href="#cards-section" offset="60" className={classes.link}>

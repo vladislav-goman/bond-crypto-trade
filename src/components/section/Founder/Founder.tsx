@@ -24,13 +24,17 @@ export const Founder: React.FC = () => {
                     <h2 className={classes.title}>Игнат Бонд</h2>
                     <p className={classes.description}>Основатель образовательного продукта BondCryptoTrade</p>
                     <div className={classes.social}>
-                      <a href="https://telegram.com" target="_blank" rel="noreferrer">
+                      <a href="https://t.me/bondcryptotrade" target="_blank" rel="noreferrer">
                         <Telegram fill="#0D0033" />
                       </a>
-                      <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                      <a href="https://youtube.com/c/BondCryptoTrade" target="_blank" rel="noreferrer">
                         <Youtube fill="#0D0033" />
                       </a>
-                      <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://instagram.com/ignatbond?utm_medium=bondcryptotrade.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <Instagram fill="#0D0033" />
                       </a>
                     </div>

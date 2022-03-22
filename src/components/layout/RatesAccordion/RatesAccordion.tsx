@@ -42,7 +42,13 @@ export const RatesAccordion: React.FC = () => {
                   <Badge className={classes.badge}>€249</Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button isLink title="Запись" className={classes.button} type={ButtonType.secondary} />
+                  <Button
+                    isLink
+                    href="https://buy.stripe.com/4gw6oAdJQd436sg6oE"
+                    title="Запись"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
                   <PlusSign />
                 </div>
               </Accordion.Trigger>
@@ -61,7 +67,13 @@ export const RatesAccordion: React.FC = () => {
                   <Badge className={classes.badge}>€599</Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button isLink title="Запись" className={classes.button} type={ButtonType.secondary} />
+                  <Button
+                    isLink
+                    title="Запись"
+                    href="https://buy.stripe.com/3cs00c5dkbZZ9EsfZf"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
                   <PlusSign />
                 </div>
               </Accordion.Trigger>
@@ -83,7 +95,13 @@ export const RatesAccordion: React.FC = () => {
                   <Badge className={classes.badge}>€2999</Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button isLink title="Запись" className={classes.button} type={ButtonType.secondary} />
+                  <Button
+                    isLink
+                    title="Запись"
+                    href="https://buy.stripe.com/5kA5kwbBI3tt4k86oG"
+                    className={classes.button}
+                    type={ButtonType.secondary}
+                  />
                   <PlusSign />
                 </div>
                 <div className={cx(classes.group, classes.mobile)}>

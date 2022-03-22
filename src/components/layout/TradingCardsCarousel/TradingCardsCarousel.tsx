@@ -17,6 +17,7 @@ export const TradingCardsCarousel: React.FC = () => {
       effect={'cards'}
       modules={[Pagination, A11y, EffectCards, Autoplay]}
       spaceBetween={50}
+      grabCursor
       autoplay={{
         delay: 5000,
         disableOnInteraction: true,

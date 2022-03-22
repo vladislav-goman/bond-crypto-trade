@@ -6,6 +6,25 @@ import classes from './Demo.module.scss';
 import StarIcon from '../../../images/white-star.svg';
 
 export const Demo: React.FC = () => {
+  const submitHandler = (e: any) => {
+    e.preventDefault();
+    const filename = 'BondCryptoTrade.pdf';
+    const element = document.createElement('a');
+    element.setAttribute('href', '/' + filename);
+    element.setAttribute('target', '_blank');
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+
+    const name = document.querySelector('#name')! as HTMLInputElement;
+    const email = document.querySelector('#email')! as HTMLInputElement;
+    const tel = document.querySelector('#tel')! as HTMLInputElement;
+
+    name.value = '';
+    email.value = '';
+    tel.value = '';
+  };
+
   return (
     <Container id="demo" className={classes.demo}>
       <VideoSection />
@@ -61,18 +80,18 @@ export const Demo: React.FC = () => {
           </div>
         </Col>
         <Col xl={{ span: 4, offset: 1 }}>
-          <form className={classes.form}>
+          <form className={classes.form} onSubmit={submitHandler}>
             <div className={classes.input__group}>
               <label className={classes.input__label} htmlFor="name">
                 Ваше Имя
               </label>
-              <input className={classes.input} id="name" placeholder="Александр Сергеев"></input>
+              <input className={classes.input} id="name" placeholder="Александр Сергеев" required></input>
             </div>
             <div className={classes.input__group}>
               <label className={classes.input__label} htmlFor="email">
                 Email
               </label>
-              <input className={classes.input} type="email" id="email" placeholder="example@mail.com"></input>
+              <input className={classes.input} type="email" id="email" placeholder="example@mail.com" required></input>
             </div>
             <div className={classes.input__group}>
               <label className={classes.input__label} htmlFor="tel">
@@ -80,7 +99,7 @@ export const Demo: React.FC = () => {
               </label>
               <input className={classes.input} type="tel" id="tel" placeholder="+375 44 999 99 99"></input>
             </div>
-            <input className={classes.submit} type="submit" value="Отправить" />
+            <input className={classes.submit} type="submit" value="Получить" />
           </form>
         </Col>
       </Row>

@@ -136,5 +136,11 @@
     font-family: $header-font-family;
     background-color: transparent;
     align-self: center;
+    transition: $mid-transition;
+
+    &:hover {
+      background-color: #271f46;
+      color: $white;
+    }
   }
 }
