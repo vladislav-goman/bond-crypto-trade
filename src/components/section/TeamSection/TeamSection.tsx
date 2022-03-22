@@ -35,7 +35,7 @@ export const TeamSection: React.FC = () => {
                   <Image src={telegram} alt="telegram" className={classes.telegram} />
                 </a>
                 <p className={classes.fullName}>Макcим Ротару</p>
-                <p className={classes.position}>Сооснователь и копирайтер на пол ставки</p>
+                <p className={classes.position}>Сооснователь</p>
               </div>
               <div className={classes.card}>
                 <Image src={bodya} alt="Bodya Invate" className={classes.memberImage} placeholder="blur" />

@@ -44,6 +44,7 @@ export const RatesAccordion: React.FC = () => {
                 <div className={classes.group}>
                   <Button
                     isLink
+                    target="_blank"
                     href="https://buy.stripe.com/4gw6oAdJQd436sg6oE"
                     title="Запись"
                     className={classes.button}
@@ -70,6 +71,7 @@ export const RatesAccordion: React.FC = () => {
                   <Button
                     isLink
                     title="Запись"
+                    target="_blank"
                     href="https://buy.stripe.com/3cs00c5dkbZZ9EsfZf"
                     className={classes.button}
                     type={ButtonType.secondary}
@@ -98,6 +100,7 @@ export const RatesAccordion: React.FC = () => {
                   <Button
                     isLink
                     title="Запись"
+                    target="_blank"
                     href="https://buy.stripe.com/5kA5kwbBI3tt4k86oG"
                     className={classes.button}
                     type={ButtonType.secondary}
