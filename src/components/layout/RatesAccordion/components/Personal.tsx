@@ -37,19 +37,7 @@ export const Personal: React.FC = () => {
                 <div className={classes.mark}>
                   <PlusMark />
                 </div>
-                <h5 className={classes.label}>Для тех, кто хочет учиться тет-а-тет с Игнатом</h5>
-              </li>
-              <li className={classes.listItem}>
-                <div className={classes.mark}>
-                  <PlusMark />
-                </div>
-                <h5 className={classes.label}>Совместить курс Инвест и Трейдинг</h5>
-              </li>
-              <li className={classes.listItem}>
-                <div className={classes.mark}>
-                  <PlusMark />
-                </div>
-                <h5 className={classes.label}>Получать самую свежую аналитику и мнение напрямую от Игната</h5>
+                <h5 className={classes.label}>Для тех, кто хочет получить персональное менторство.</h5>
               </li>
             </ul>
           </div>
@@ -62,10 +50,39 @@ export const Personal: React.FC = () => {
                 <div className={classes.mark}>
                   <StarMark />
                 </div>
+                <h5 className={classes.label}>Поможем достигнуть результата и привести вас из точки А в точку Б.</h5>
+              </li>
+              <li className={classes.listItem}>
+                <div className={classes.mark}>
+                  <StarMark />
+                </div>
+                <h5 className={classes.label}>Поможем вам развиваться независимо от вашего уровня.</h5>
+              </li>
+              <li className={classes.listItem}>
+                <div className={classes.mark}>
+                  <StarMark />
+                </div>
+                <h5 className={classes.label}>Доступ как к групповым, так и индивидуальным материалам.</h5>
+              </li>
+              <li className={classes.listItem}>
+                <div className={classes.mark}>
+                  <StarMark />
+                </div>
                 <h5 className={classes.label}>
-                  Все то же самое что в обоих тарифах + уникальную возможность общаться с Игнатом тет-а-тет и разбирать
-                  все Ваши вопросы и кейсы индивидуально.
+                  Персональный подход, постоянный контроль, срез кривой капитала каждый месяц после обучения.
                 </h5>
+              </li>
+              <li className={classes.listItem}>
+                <div className={classes.mark}>
+                  <StarMark />
+                </div>
+                <h5 className={classes.label}>Прямой контакт с Игнатом 24/7</h5>
+              </li>
+              <li className={classes.listItem}>
+                <div className={classes.mark}>
+                  <StarMark />
+                </div>
+                <h5 className={classes.label}>Длительность 8 недель и поддержка после обучения.</h5>
               </li>
             </ul>
           </div>

@@ -36,7 +36,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            1. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
+            1. Полагаться на <Highlight>собственные</Highlight> навыки, знания и <Highlight>анализ</Highlight>.
           </h3>
           <Balance className={classes.balance} balance={500.25} />
         </article>
@@ -45,7 +45,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            2. <Highlight>Делиться</Highlight> опытом, <Highlight>учиться</Highlight> на ошибках окружающих
+            2. Соблюдать <Highlight>риск</Highlight>-менеджмент.
           </h3>
           <Balance className={classes.balance} withUp balance={741.94} />
         </article>
@@ -54,7 +54,7 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            3. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
+            3. <Highlight>Терпеливо</Highlight> относиться к <Highlight>своим</Highlight> сделкам.
           </h3>
           <Balance className={classes.balance} withUp balance={2319.55} />
         </article>
@@ -63,27 +63,9 @@ export const TradingCardsCarousel: React.FC = () => {
         <article className={classes.card}>
           <PaginationEl />
           <h3 className={classes.title}>
-            4. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
+            4. Контролировать <Highlight>эмоции</Highlight> и придерживаться строгих <Highlight>правил.</Highlight>
           </h3>
           <Balance className={classes.balance} withUp balance={5_771.01} />
-        </article>
-      </SwiperSlide>
-      <SwiperSlide className={classes.slide}>
-        <article className={classes.card}>
-          <PaginationEl />
-          <h3 className={classes.title}>
-            5. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
-          </h3>
-          <Balance className={classes.balance} withUp balance={17_000.99} />
-        </article>
-      </SwiperSlide>
-      <SwiperSlide className={classes.slide}>
-        <article className={classes.card}>
-          <PaginationEl />
-          <h3 className={classes.title}>
-            6. Быть <Highlight>ответственным</Highlight> и постоянно <Highlight>учиться.</Highlight>
-          </h3>
-          <Balance className={classes.balance} withUp balance={24_500.73} />
         </article>
       </SwiperSlide>
     </Swiper>

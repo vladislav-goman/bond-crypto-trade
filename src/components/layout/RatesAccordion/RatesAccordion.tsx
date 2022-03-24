@@ -1,11 +1,14 @@
 import React from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
 import cx from 'classnames';
+import Image from 'next/image';
 import classes from './RatesAccordion.module.scss';
 import { Badge } from '../../common/Badge';
 import { Button, ButtonType } from '../../common/Button';
 import { Invest, Personal, Trading } from './components';
 import { Animation } from '../../common/Animation';
+import card from '../../../images/card.png';
+import bitcoin from '../../../images/bitcoin.png';
 
 const PlusSign: React.FC = () => {
   return (
@@ -46,10 +49,22 @@ export const RatesAccordion: React.FC = () => {
                     isLink
                     target="_blank"
                     href="https://buy.stripe.com/4gw6oAdJQd436sg6oE"
-                    title="Запись"
+                    className={cx(classes.button, classes.card)}
+                    type={ButtonType.secondary}
+                  >
+                    <Image className={classes.cardImage} src={card} alt="Оплата картой" />
+                  </Button>
+
+                  <Button
+                    isLink
+                    target="_blank"
+                    href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=323eea9732086a832900def40f3296c9&item_name=BCT+INVEST&currency=USDT.TRC20&amountf=249.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&"
                     className={classes.button}
                     type={ButtonType.secondary}
-                  />
+                  >
+                    <Image className={classes.cryptoImage} src={bitcoin} alt="Оплата криптовалютой" />
+                  </Button>
+
                   <PlusSign />
                 </div>
               </Accordion.Trigger>
@@ -70,12 +85,23 @@ export const RatesAccordion: React.FC = () => {
                 <div className={classes.group}>
                   <Button
                     isLink
-                    title="Запись"
                     target="_blank"
                     href="https://buy.stripe.com/3cs00c5dkbZZ9EsfZf"
+                    className={cx(classes.button, classes.card)}
+                    type={ButtonType.secondary}
+                  >
+                    <Image height="32" width="48" src={card} alt="Оплата картой" />
+                  </Button>
+
+                  <Button
+                    isLink
+                    target="_blank"
+                    href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=323eea9732086a832900def40f3296c9&item_name=BCT+TRADING&currency=USDT.TRC20&amountf=599.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&"
                     className={classes.button}
                     type={ButtonType.secondary}
-                  />
+                  >
+                    <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
+                  </Button>
                   <PlusSign />
                 </div>
               </Accordion.Trigger>
@@ -99,12 +125,23 @@ export const RatesAccordion: React.FC = () => {
                 <div className={classes.group}>
                   <Button
                     isLink
-                    title="Запись"
                     target="_blank"
                     href="https://buy.stripe.com/5kA5kwbBI3tt4k86oG"
+                    className={cx(classes.button, classes.card)}
+                    type={ButtonType.secondary}
+                  >
+                    <Image height="32" width="48" src={card} alt="Оплата картой" />
+                  </Button>
+
+                  <Button
+                    isLink
+                    target="_blank"
+                    href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=323eea9732086a832900def40f3296c9&item_name=BCT+INDIVIDUAL&currency=USDT.TRC20&amountf=2499.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&"
                     className={classes.button}
                     type={ButtonType.secondary}
-                  />
+                  >
+                    <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
+                  </Button>
                   <PlusSign />
                 </div>
                 <div className={cx(classes.group, classes.mobile)}>

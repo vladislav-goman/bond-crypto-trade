@@ -103,7 +103,14 @@
   }
 
   .marginTopMobile {
-    margin-top: 24px;
+    @include use-mobile() {
+      margin-top: 24px;
+    }
+  }
+
+  .cardImage {
+    width: 48px;
+    height: 32px;
   }
 
   .badge {
@@ -118,12 +125,41 @@
 
     @include use-mobile() {
       margin-left: 0;
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0.3rem 0.6rem;
     }
   }
 
   .button {
     font-size: 14px;
     margin-right: 24px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    width: 48px;
+    margin-right: 0.8rem;
+
+    &.card {
+      width: 60px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    &:hover {
+      img {
+        filter: invert(100%);
+      }
+    }
+
+    img {
+      transition: $mid-transition;
+    }
+
+    @include use-mobile() {
+      margin-right: 8px;
+    }
   }
 
   .group {
@@ -194,6 +230,7 @@
     &.mobile {
       @include use-mobile() {
         display: block;
+        font-size: 26px;
       }
     }
   }

@@ -17,8 +17,8 @@
 
   .header {
     font-weight: 500;
-    font-size: 49px;
-    line-height: 56px;
+    font-size: 68px;
+    line-height: 72px;
     margin: 0 0 24px;
     color: white;
     text-align: left;
@@ -70,6 +70,18 @@
       flex-direction: column;
       justify-content: flex-start;
       gap: 1rem;
+
+      @include use-mobile() {
+        flex-direction: row;
+      }
+
+      .bottom {
+        @include use-mobile() {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
 
       .imageWrapper {
         width: 40px;

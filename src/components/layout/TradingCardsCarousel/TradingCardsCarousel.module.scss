@@ -10,10 +10,8 @@
     flex-direction: column;
     height: 100%;
 
-    @include use-tablet() {
-      .balance {
-        margin-top: auto;
-      }
+    .balance {
+      margin-top: auto;
     }
   }
 

@@ -29,7 +29,7 @@ export const Demo: React.FC = () => {
     <Container id="demo" className={classes.demo}>
       <VideoSection />
       <Row>
-        <Col xl={{ span: 5, offset: 1 }}>
+        <Col xl={{ span: 10, offset: 1 }}>
           <h2 className={classes.header}>Получите демо материал</h2>
           <p className={classes.description}>Заполните форму и получите нашу вводную лекцию совершенно бесплатно.</p>
         </Col>
@@ -54,7 +54,7 @@ export const Demo: React.FC = () => {
                 </div>
               </div>
               <div className={classes.bottom}>
-                <h3 className={classes.label}>Информация о риск менеджменте и диверсификации активов</h3>
+                <h3 className={classes.label}>Информация о диверсификации активов</h3>
               </div>
             </div>
             <div className={classes.item}>
@@ -64,7 +64,7 @@ export const Demo: React.FC = () => {
                 </div>
               </div>
               <div className={classes.bottom}>
-                <h3 className={classes.label}>Виды торговли</h3>
+                <h3 className={classes.label}>Виды и типы торговли</h3>
               </div>
             </div>
             <div className={classes.item}>
