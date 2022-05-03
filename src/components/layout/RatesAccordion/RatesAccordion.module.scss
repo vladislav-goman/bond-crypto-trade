@@ -78,11 +78,16 @@
   .starMark {
     width: 24px;
     height: 24px;
+    margin-right: 24px;
     border-radius: 50%;
     background-color: $white-lilac;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include use-mobile() {
+      margin: 0;
+    }
 
     &.big {
       width: 48px;
@@ -116,14 +121,18 @@
   .badge {
     background-color: #0d0033;
     border-radius: 24px;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 32px;
     color: $white;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.6rem;
     font-weight: 400;
-    margin-left: 24px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 
-    @include use-mobile() {
+    @include use-tablet() {
       margin-left: 0;
       font-size: 20px;
       line-height: 26px;
@@ -134,27 +143,23 @@
   .button {
     font-size: 14px;
     margin-right: 24px;
-    padding: 8px 12px;
-    border-radius: 12px;
-    width: 48px;
+    padding: 12px 20px;
+    border-radius: 4px;
     margin-right: 0.8rem;
 
-    &.card {
-      width: 60px;
+    @include use-mobile() {
+      display: none;
     }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    &:hover {
-      img {
-        filter: invert(100%);
+    &.mobile {
+      flex: 1;
+      display: none;
+      text-align: center;
+      margin-top: 23px;
+
+      @include use-mobile() {
+        display: block;
       }
-    }
-
-    img {
-      transition: $mid-transition;
     }
 
     @include use-mobile() {
@@ -167,11 +172,13 @@
     align-items: center;
 
     &.mobile {
-      flex: 2;
+      width: 100%;
+      flex: 1;
+      flex-wrap: wrap;
       justify-content: space-between;
       display: none;
       @include use-mobile() {
-        display: flex;
+        display: block;
       }
     }
   }
@@ -179,6 +186,7 @@
   .trigger {
     background-color: transparent;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border: none;
@@ -214,23 +222,27 @@
   .acc__header {
     color: #0d0033;
     font-weight: 500;
-    font-size: 39px;
+    font-size: 30px;
     margin: 0;
     transition: $mid-transition;
+    margin-right: 24px;
 
     @include use-tablet() {
-      font-size: 31px;
+      font-size: 26px;
       line-height: 40px;
+      text-align: left;
     }
 
     @include use-mobile() {
       display: none;
+      min-width: 240px;
     }
 
     &.mobile {
       @include use-mobile() {
         display: block;
-        font-size: 26px;
+        margin-right: 0;
+        font-size: 31px;
       }
     }
   }

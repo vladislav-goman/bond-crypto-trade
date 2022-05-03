@@ -2,6 +2,7 @@ import React from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
 import cx from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 import classes from './RatesAccordion.module.scss';
 import { Badge } from '../../common/Badge';
 import { Button, ButtonType } from '../../common/Button';
@@ -9,6 +10,7 @@ import { Invest, Personal, Trading } from './components';
 import { Animation } from '../../common/Animation';
 import card from '../../../images/card.png';
 import bitcoin from '../../../images/bitcoin.png';
+import tether from '../../../images/tether.svg';
 
 const PlusSign: React.FC = () => {
   return (
@@ -43,29 +45,46 @@ export const RatesAccordion: React.FC = () => {
                 <div className={classes.group}>
                   <h2 className={classes.acc__header}>Инвест</h2>
                   <Badge className={classes.badge}>€249</Badge>
+                  <Badge className={classes.badge}>
+                    <Image src={tether} height={20} width={20} alt="USDT" />
+                    249
+                  </Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button
-                    isLink
-                    target="_blank"
-                    href="https://buy.stripe.com/4gw6oAdJQd436sg6oE"
-                    className={cx(classes.button, classes.card)}
-                    type={ButtonType.secondary}
-                  >
-                    <Image className={classes.cardImage} src={card} alt="Оплата картой" />
-                  </Button>
+                  {/* <Button
+                      isLink
+                      target="_blank"
+                      href="https://buy.stripe.com/4gw6oAdJQd436sg6oE"
+                      className={cx(classes.button, classes.card)}
+                      type={ButtonType.secondary}
+                    >
+                      <Image className={classes.cardImage} src={card} alt="Оплата картой" />
+                    </Button>
 
-                  <Button
-                    isLink
-                    target="_blank"
-                    href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=323eea9732086a832900def40f3296c9&item_name=BCT+INVEST&currency=USDT.TRC20&amountf=249.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&"
-                    className={classes.button}
-                    type={ButtonType.secondary}
-                  >
-                    <Image className={classes.cryptoImage} src={bitcoin} alt="Оплата криптовалютой" />
-                  </Button>
+                    <Button
+                      isLink
+                      target="_blank"
+                      href="https://www.coinpayments.net/index.php?cmd=_pay&reset=1&merchant=323eea9732086a832900def40f3296c9&item_name=BCT+INVEST&currency=USDT.TRC20&amountf=249.00000000&quantity=1&allow_quantity=0&want_shipping=0&allow_extra=0&"
+                      className={classes.button}
+                      type={ButtonType.secondary}
+                    >
+                      <Image className={classes.cryptoImage} src={bitcoin} alt="Оплата криптовалютой" />
+                    </Button> */}
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={classes.button} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
 
                   <PlusSign />
+                </div>
+                <div className={cx(classes.group, classes.mobile)}>
+                  <h2 className={cx(classes.acc__header, classes.mobile)}>Инвест</h2>
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={cx(classes.button, classes.mobile)} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
                 </div>
               </Accordion.Trigger>
             </Accordion.Header>
@@ -81,9 +100,13 @@ export const RatesAccordion: React.FC = () => {
                 <div className={classes.group}>
                   <h2 className={classes.acc__header}>Трейдинг</h2>
                   <Badge className={classes.badge}>€599</Badge>
+                  <Badge className={classes.badge}>
+                    <Image src={tether} height={20} width={20} alt="USDT" />
+                    599
+                  </Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button
+                  {/* <Button
                     isLink
                     target="_blank"
                     href="https://buy.stripe.com/3cs00c5dkbZZ9EsfZf"
@@ -101,8 +124,21 @@ export const RatesAccordion: React.FC = () => {
                     type={ButtonType.secondary}
                   >
                     <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
-                  </Button>
+                  </Button> */}
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={classes.button} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
                   <PlusSign />
+                </div>
+                <div className={cx(classes.group, classes.mobile)}>
+                  <h2 className={cx(classes.acc__header, classes.mobile)}>Трейдинг</h2>
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={cx(classes.button, classes.mobile)} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
                 </div>
               </Accordion.Trigger>
             </Accordion.Header>
@@ -116,14 +152,20 @@ export const RatesAccordion: React.FC = () => {
             <Accordion.Header>
               <Accordion.Trigger className={classes.trigger}>
                 <div className={classes.group}>
-                  <h2 className={classes.acc__header}>Индивидуальное</h2>
+                  <h2 className={classes.acc__header} style={{ marginRight: 0 }}>
+                    Персональное
+                  </h2>
                   <div className={classes.notMobile}>
                     <StarMark />
                   </div>
                   <Badge className={classes.badge}>€2999</Badge>
+                  <Badge className={classes.badge}>
+                    <Image src={tether} height={20} width={20} alt="USDT" />
+                    2449
+                  </Badge>
                 </div>
                 <div className={classes.group}>
-                  <Button
+                  {/* <Button
                     isLink
                     target="_blank"
                     href="https://buy.stripe.com/5kA5kwbBI3tt4k86oG"
@@ -141,12 +183,24 @@ export const RatesAccordion: React.FC = () => {
                     type={ButtonType.secondary}
                   >
                     <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
-                  </Button>
+                  </Button> */}
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={classes.button} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
                   <PlusSign />
                 </div>
                 <div className={cx(classes.group, classes.mobile)}>
-                  <h2 className={cx(classes.acc__header, classes.mobile)}>Индивидуальное</h2>
-                  <StarMark />
+                  <div className={classes.group}>
+                    <h2 className={cx(classes.acc__header, classes.mobile)}>Персональное</h2>
+                    <StarMark />
+                  </div>
+                  <Link href="/checkout" passHref>
+                    <Button isLink className={cx(classes.button, classes.mobile)} type={ButtonType.secondary}>
+                      Запись
+                    </Button>
+                  </Link>
                 </div>
               </Accordion.Trigger>
             </Accordion.Header>
