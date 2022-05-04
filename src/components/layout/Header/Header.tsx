@@ -6,7 +6,7 @@ import classes from './Header.module.scss';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
 import { Button } from '../../common/Button';
 
-export const Header: React.FC<{ navData: { href: string; title: string }[]; isSticky: boolean }> = ({
+export const Header: React.FC<{ navData: { href: string; title: string }[]; isSticky?: boolean }> = ({
   navData = [],
   isSticky = true,
 }) => {
