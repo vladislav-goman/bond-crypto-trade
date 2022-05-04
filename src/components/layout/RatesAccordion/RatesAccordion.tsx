@@ -70,7 +70,7 @@ export const RatesAccordion: React.FC = () => {
                     >
                       <Image className={classes.cryptoImage} src={bitcoin} alt="Оплата криптовалютой" />
                     </Button> */}
-                  <Link href="/checkout" passHref>
+                  <Link href="/checkout/invest" passHref>
                     <Button isLink className={classes.button} type={ButtonType.secondary}>
                       Запись
                     </Button>
@@ -125,7 +125,7 @@ export const RatesAccordion: React.FC = () => {
                   >
                     <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
                   </Button> */}
-                  <Link href="/checkout" passHref>
+                  <Link href="/checkout/trading" passHref>
                     <Button isLink className={classes.button} type={ButtonType.secondary}>
                       Запись
                     </Button>
@@ -184,7 +184,7 @@ export const RatesAccordion: React.FC = () => {
                   >
                     <Image height="32" width="32" src={bitcoin} alt="Оплата криптовалютой" />
                   </Button> */}
-                  <Link href="/checkout" passHref>
+                  <Link href="/checkout/personal" passHref>
                     <Button isLink className={classes.button} type={ButtonType.secondary}>
                       Запись
                     </Button>

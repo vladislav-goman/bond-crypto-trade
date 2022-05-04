@@ -15,6 +15,10 @@
     padding: 0.5rem 0;
   }
 
+  &.static {
+    position: relative;
+  }
+
   &.active {
     background-color: $white;
     border-color: $secondary-color;

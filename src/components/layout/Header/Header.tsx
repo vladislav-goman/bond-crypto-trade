@@ -6,7 +6,10 @@ import classes from './Header.module.scss';
 import { HamburgerMenu } from '../../common/HamburgerMenu';
 import { Button } from '../../common/Button';
 
-export const Header: React.FC<{ navData: { href: string; title: string }[] }> = ({ navData = [] }) => {
+export const Header: React.FC<{ navData: { href: string; title: string }[]; isSticky: boolean }> = ({
+  navData = [],
+  isSticky = true,
+}) => {
   const [isActive, setIsActive] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const bodyRef = useRef<HTMLElement>();
@@ -32,15 +35,25 @@ export const Header: React.FC<{ navData: { href: string; title: string }[] }> = 
   }, [isActive]);
 
   useEffect(() => {
-    bodyRef.current = document.querySelector('body')!;
-    tweakHeader();
-    document.addEventListener('scroll', tweakHeader);
+    if (isSticky) {
+      bodyRef.current = document.querySelector('body')!;
+      tweakHeader();
+      document.addEventListener('scroll', tweakHeader);
+    }
 
     return () => document.removeEventListener('scroll', tweakHeader);
-  }, [tweakHeader]);
+  }, [tweakHeader, isSticky]);
 
   return (
-    <header className={cx(classes.header, { [classes.active]: isActive }, 'animate__animated', 'animate__fadeIn')}>
+    <header
+      className={cx(
+        classes.header,
+        { [classes.active]: isActive },
+        { [classes.static]: !isSticky },
+        'animate__animated',
+        'animate__fadeIn'
+      )}
+    >
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -53,12 +66,12 @@ export const Header: React.FC<{ navData: { href: string; title: string }[] }> = 
 
               <nav className={classes.nav}>
                 {navData.map(({ href, title }) =>
-                  href !== '/' ? (
+                  !href.includes('/') ? (
                     <AnchorLink key={title} offset="57.6" href={`#${href}`} className={classes.link}>
                       {title}
                     </AnchorLink>
                   ) : (
-                    <Link href={href}>
+                    <Link key={href} href={href}>
                       <a className={classes.link}>{title}</a>
                     </Link>
                   )
@@ -73,7 +86,7 @@ export const Header: React.FC<{ navData: { href: string; title: string }[] }> = 
               >
                 <div className={classes.mobileNav}>
                   {navData.map(({ href, title }) =>
-                    href !== '/' ? (
+                    !href.includes('/') ? (
                       <AnchorLink
                         key={title}
                         offset="49.6"
@@ -84,7 +97,7 @@ export const Header: React.FC<{ navData: { href: string; title: string }[] }> = 
                         {title}
                       </AnchorLink>
                     ) : (
-                      <Link href={href}>
+                      <Link key={href} href={href}>
                         <a className={classes.link}>{title}</a>
                       </Link>
                     )

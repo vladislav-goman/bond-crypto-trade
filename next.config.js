@@ -6,6 +6,7 @@ const nextConfig = {
     locales: ['ru'],
     defaultLocale: 'ru',
   },
+  mongodburl: process.env.DB_CONNECT,
 };
 
 module.exports = nextConfig;

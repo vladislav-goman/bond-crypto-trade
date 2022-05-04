@@ -22,12 +22,12 @@ export const Footer: React.FC<{ dark?: boolean; navData: { href: string; title: 
                 </Link>
                 <div className={classes.link}>
                   {navData.map(({ href, title }) =>
-                    href !== '/' ? (
+                    !href.includes('/') ? (
                       <AnchorLink key={title} offset="57.6" href={`#${href}`} className={classes.link__item}>
                         {title}
                       </AnchorLink>
                     ) : (
-                      <a href={href} className={classes.link__item}>
+                      <a key={href} href={href} className={classes.link__item}>
                         {title}
                       </a>
                     )
