@@ -8,8 +8,6 @@ import { Badge } from '../../common/Badge';
 import { Button, ButtonType } from '../../common/Button';
 import { Invest, Personal, Trading } from './components';
 import { Animation } from '../../common/Animation';
-import card from '../../../images/card.png';
-import bitcoin from '../../../images/bitcoin.png';
 import tether from '../../../images/tether.svg';
 
 const PlusSign: React.FC = () => {
